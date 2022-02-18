@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1125167762947771" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swapnil's Lab || Home</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1125167762947771" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .fix{
+      height: 500px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    #top{
+      background-image: url('https://img.freepik.com/free-photo/milford-sound-new-zealand-travel-destination-concept_53876-42945.jpg?w=740');
+    }
+    #middle{
+      background-image: url('https://img.freepik.com/free-vector/spotlight-garden_1308-6551.jpg?w=740');
+    }
+    #bottom{
+      background-image: url('https://img.freepik.com/free-photo/seeds-with-lit-bulb_1232-553.jpg?w=740');
+    }
+    .fix::after{
+      content: "PARALLAX SCROLLING";
+      display: block;
+      height: 50px;
+      width: 200px;
+      position: relative;
+      top: calc(50% - 25px);
+      left: calc(50% - 100px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .label{
+      height: 100px;
+      width: 100%;
+      background-color: rgba(137, 233, 255, 1);
+    }
+  </style>
 </head>
 <body>
-  <h1>This page is under construction.</h1>
+  <div class="fix" id="top"></div>
+  <div class="label"></div>
+  <div class="fix" id="middle"></div>
+  <div class="label"></div>
+  <div class="fix" id="bottom"></div>
 </body>
 </html>
