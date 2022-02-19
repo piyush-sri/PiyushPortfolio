@@ -1,4 +1,7 @@
-function fillBucket(){
+/* created by : SwapniL */
+/* script for Fill-The-Bucket-II */
+
+      function fillBucket(){
         const bkt = document.querySelector("#bucket");
         bkt.style.backgroundColor = "skyblue";
       }
