@@ -1,0 +1,414 @@
+<!-- created by : SwapniL -->
+<!-- fill-the-bucket-I -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      vertical-align: top;
+      font-size: 0;
+    }
+    #pipe1{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe1::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: -10px;
+    }
+    #pipe1::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe2{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe2::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 15px);
+    }
+    #pipe2::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe3{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe3::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: -10px;
+    }
+    #pipe3::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe4{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe4::after{
+      content: "";
+      display: block;
+      height: 50px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: -10px;
+    }
+    #pipe4::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: -10px;
+    }
+    #pipe5{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe5::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: -10px;
+    }
+    #pipe5::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe6{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe6::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 15px);
+    }
+    #pipe6::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe7{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe7::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 15px);
+    }
+    #pipe7::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe8{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe8::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: -10px;
+    }
+    #pipe8::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: calc(50% - 15px);
+    }
+    #pipe9{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background-color: teal;
+      transition: all 0.5s;
+    }
+    #pipe9::after{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 10px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 15px);
+    }
+    #pipe9::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 30px;
+      background-color: skyblue;
+      position: relative;
+      top: calc(50% - 5px);
+      left: -10px;
+    }
+    .rotateZero{
+      transform : rotate(0deg);
+    }
+    .rotateNinety{
+      transform : rotate(90deg);
+    }
+    .rotateOneEighty{
+      transform : rotate(180deg);
+    }
+    .rotateTwoSeventy{
+      transform : rotate(270deg);
+    }
+    #bucket{
+      height: 30px;
+      width: 40px;
+      border-left: 2px solid brown;
+      border-right: 2px solid brown;
+      border-bottom: 2px solid brown;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      transition: all 2s;
+    }
+    #tap{
+      margin: 10px;
+      height: 5px;
+      width: 20px;
+      background-color: brown;
+    }
+    #tap::before{
+      content: "";
+      display: block;
+      height: 10px;
+      width: 15px;
+      position: relative;
+      top: 5px;
+      transform: rotate(90deg);
+      background-color: brown;
+    }
+    button{
+      margin-top: 10px;
+    }
+    a{
+    text-decoration: none;
+    display:inline-block;
+    width : fit-content;
+    position: relative;
+    top: 10vh;
+    padding: 12px;
+    border-radius: 20px;
+    background-color:aqua;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <div id="tap"></div>
+    <div id="base1">
+      <div id="pipe1" onclick="rotatePipe(1)"></div>
+      <div id="pipe2" onclick="rotatePipe(2)"></div>
+      <div id="pipe3" onclick="rotatePipe(3)"></div>
+    </div>
+    <div id="base2">
+      <div id="pipe4" onclick="rotatePipe(4)"></div>
+      <div id="pipe5" onclick="rotatePipe(5)"></div>
+      <div id="pipe6" onclick="rotatePipe(6)"></div>
+    </div>
+    <div id="base3">
+      <div id="pipe7" onclick="rotatePipe(7)"></div>
+      <div id="pipe8" onclick="rotatePipe(8)"></div>
+      <div id="pipe9" onclick="rotatePipe(9)"></div>
+    </div>
+    <div id="bucket"></div>
+    <button onclick="fillTheBucket()">Fill</button>
+    <p>
+    <a href="https://youtube.com/channel/UCvJDlPl18PysY8CHfH_OLnw"
+     target="_blank">My YouTube Channel</a>
+    </p>
+  </center>
+  <script>
+    alert("Tap on the water pipes to rotate them. After setting up the pipes in the right angle click the fill button to fill the bucket..");
+
+    alert("good luck 👍🏻");  
+    var rotation = [0,0,0,0,0,0,0,0,0,0];
+    const p1 = document.querySelector("#pipe1");
+    const p2 = document.querySelector("#pipe2");
+    const p3 = document.querySelector("#pipe3");
+    const p4 = document.querySelector("#pipe4");
+    const p5 = document.querySelector("#pipe5");
+    const p6 = document.querySelector("#pipe6");
+    const p7 = document.querySelector("#pipe7");
+    const p8 = document.querySelector("#pipe8");
+    const p9 = document.querySelector("#pipe9");
+    function rotatePipe(id){
+      let deg = rotation[id];
+      if(deg === 0){
+        switch(id){
+          case 1 : p1.setAttribute('class', 'rotateNinety'); break;
+          case 2 : p2.setAttribute('class', 'rotateNinety'); break;
+          case 3 : p3.setAttribute('class', 'rotateNinety'); break;
+          case 4 : p4.setAttribute('class', 'rotateNinety'); break;
+          case 5 : p5.setAttribute('class', 'rotateNinety'); break;
+          case 6 : p6.setAttribute('class', 'rotateNinety'); break;
+          case 7 : p7.setAttribute('class', 'rotateNinety'); break;
+          case 8 : p8.setAttribute('class', 'rotateNinety'); break;
+          case 9 : p9.setAttribute('class', 'rotateNinety'); break;
+        }
+        rotation[id] = 90;
+      }
+      else if(deg === 90){
+        switch(id){
+          case 1 : p1.setAttribute('class', 'rotateOneEighty'); break;
+          case 2 : p2.setAttribute('class', 'rotateOneEighty'); break;
+          case 3 : p3.setAttribute('class', 'rotateOneEighty'); break;
+          case 4 : p4.setAttribute('class', 'rotateOneEighty'); break;
+          case 5 : p5.setAttribute('class', 'rotateOneEighty'); break;
+          case 6 : p6.setAttribute('class', 'rotateOneEighty'); break;
+          case 7 : p7.setAttribute('class', 'rotateOneEighty'); break;
+          case 8 : p8.setAttribute('class', 'rotateOneEighty'); break;
+          case 9 : p9.setAttribute('class', 'rotateOneEighty'); break;
+        }
+        rotation[id] = 180;
+      }
+      else if(deg === 180){
+        switch(id){
+          case 1 : p1.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 2 : p2.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 3 : p3.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 4 : p4.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 5 : p5.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 6 : p6.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 7 : p7.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 8 : p8.setAttribute('class', 'rotateTwoSeventy'); break;
+          case 9 : p9.setAttribute('class', 'rotateTwoSeventy'); break;
+        }
+        rotation[id] = 270;
+      }
+      else{
+        switch(id){
+          case 1 : p1.setAttribute('class', 'rotateZero'); break;
+          case 2 : p2.setAttribute('class', 'rotateZero'); break;
+          case 3 : p3.setAttribute('class', 'rotateZero'); break;
+          case 4 : p4.setAttribute('class', 'rotateZero'); break;
+          case 5 : p5.setAttribute('class', 'rotateZero'); break;
+          case 6 : p6.setAttribute('class', 'rotateZero'); break;
+          case 7 : p7.setAttribute('class', 'rotateZero'); break;
+          case 8 : p8.setAttribute('class', 'rotateZero'); break;
+          case 9 : p9.setAttribute('class', 'rotateZero'); break;
+        }
+        rotation[id] = 0;
+      }
+    }
+    function fillTheBucket(){
+      if(rotation[1]==90 && rotation[2]==180 && (rotation[4]==180 || rotation[4]==0) && rotation[7]==270 && rotation[8]==180){
+        alert("good job, you won");
+        const bkt = document.querySelector("#bucket");
+        bkt.style.backgroundColor = "skyblue";
+      }
+      else{
+        alert("Oops, try again");
+        const bkt = document.querySelector("#bucket");
+        bkt.style.backgroundColor = "";
+      }
+    }
+  </script>
+</body>
+</html>
