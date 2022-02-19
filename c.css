@@ -1,0 +1,209 @@
+ *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #base{
+        height: 300px;
+        width: 180px;
+        position: absolute;
+        left: calc(50% - 90px);
+        top: calc(50% - 200px);
+      }
+     svg{
+        background-color: gray;
+        transition: all 0.5s;
+        font-size: 0;
+        vertical-align: top;
+        float: left;
+      }
+      path{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 1000;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+      .pipe{
+        animation: flow 5s linear infinite;
+      }
+      .path{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 1000;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+      .animate{
+        stroke-dasharray: 100;
+        stroke-dashoffset: 1000;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: flow 5s linear infinite;
+      }
+      .rotateNinety{
+        transform: rotate(90deg);
+      }
+      .rotateOneEighty{
+        transform: rotate(180deg);
+      }
+      .rotateTwoSeventy{
+        transform: rotate(270deg);
+      }
+      .rotateZero{
+        transform: rotate(0deg);
+      }
+      #tap{
+        height: 15px;
+        width: 10px;
+        background-color: brown;
+        position: relative;
+        left: calc(50% - 5px);
+      }
+      #tap::before{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 20px;
+        position: relative;
+        left: -5px;
+        background-color: brown;
+      }
+      #bucket{
+        height: 30px;
+        width: 40px;
+        position: relative;
+        top: 240px;
+        left: calc(50% - 20px);
+        border-left: 2px solid brown;
+        border-right: 2px solid brown;
+        border-bottom: 2px solid brown;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      #water{
+        height: 0px;
+        width: 100%;
+        background-color: skyblue;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        position: relative;
+        --h : calc(100% - 1px); 
+        top: var(--h);
+      }
+      .animateWater{
+        animation: fill-bucket 10s linear 16000ms;
+      }
+      @keyframes fill-bucket{
+        from{
+          top: var(--h);
+          height: 0px;
+        }
+        to{
+          height: 30px;
+          top: 0;
+        }
+      }
+      #fillBtn{
+        height: fit-content;
+        width: 80px;
+        position: absolute;
+        top: 300px;
+        left: calc(50% - 40px);
+      }
+      button{
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      @keyframes flow{
+        from{
+          stroke-dashoffset: 200;
+        }
+        to{
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes fill{
+        from{
+          stroke-dashoffset: 300;
+        }
+        to{
+          stroke-dashoffset: 0;
+        }
+      }
+      .filled{
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+      .revfilled{
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+      .fill-animation-1{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 400;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear;
+      }
+      .fill-animation-2{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 2000ms;
+      }
+      .fill-animation-3{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 4000ms;
+      }
+      .fill-animation-4{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 6000ms;
+      }
+      .fill-animation-5{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 8000ms;
+      }
+      .fill-animation-6{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 10000ms;
+      }
+      .fill-animation-7{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 12000ms;
+      }
+      .fill-animation-8{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        animation: fill 10s linear 14000ms;
+      }
+      a{
+        text-decoration: none;
+        display:inline-block;
+        width : fit-content;
+        position: relative;
+        top: 20vh;
+        padding: 12px;
+        border-radius: 20px;
+        background-color:aqua;
+    }
