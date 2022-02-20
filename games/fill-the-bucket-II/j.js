@@ -20,7 +20,7 @@
         const wtr = document.querySelector("#water");
         
        if(rotation[2]==180 && rotation[3]==180 && (rotation[6]==0 || rotation[6]==180) && rotation[7]==90 && (rotation[8]==0 || rotation[8]==180) && rotation[9]==90 && rotation[10]==180 && rotation[11]==180){
-         alert("congrats 🥳 you filled your bucket..");
+         alert("congrats 🥳 you won..");
          setTimeout(showMsg, 26000);
          setTimeout(fillBucket, 25000);
 
