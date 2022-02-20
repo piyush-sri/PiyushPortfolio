@@ -1,14 +1,47 @@
 <!-- created by : SwapniL -->
 <!-- Fill_The_Bucket_v2.0 -->
 
+<!--
+   special thanks to @CodyRaza for his contributions to improve this game..
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fill The Bucket V2.0</title>
-<link rel="stylesheet" href="c.css">
-</link>
+    <link rel="stylesheet" href="https://lab-swapnil.github.io/games/fill-the-bucket-II/c.css">
+    </link>
+    <style>
+    img{
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const base = document.querySelector('#base');
+      base.style.visibility = "hidden";
+    });
+    window.onload = ()=>{
+      setTimeout(display, 1000);
+    }
+    function display(){
+        const loader = document.querySelector('#loader');
+        loader.style.visibility = "hidden";
+        base.style.visibility = "visible";
+        alert("Tap on the water pipes to rotate them. After setting up the pipes in the correct angles click the fill button to fill the bucket..");
+        alert("good luck 👍🏻");
+    }
+</script>
 </head>
   <body>
+    <img id="loader" src="https://icons8.com/preloaders/preloaders/285/Moving%20blocks.gif">
     <div id="base">
       <div id="tap"></div>
       <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" onclick="rotate(1)">
@@ -76,14 +109,13 @@
       <div id="bucket">
         <div id="water"></div>
       </div>
-      <button id="fillBtn" onclick="fillTheBucket()">Fill</button>
-       <p>
-    <a href="https://youtube.com/channel/UCvJDlPl18PysY8CHfH_OLnw"
+      <button id="fillBtn" style="cursor:pointer;" onclick="fillTheBucket()">Fill</button>
+    <p align="center">
+    <a href="https://www.youtube.com/SwapnilsLab"
      target="_blank">My YouTube Channel</a>
     </p>
       </div>
     </div>
-<script async src="j.js">
-</script>
+    <script defer src="https://lab-swapnil.github.io/games/fill-the-bucket-II/j2.js"></script>
 </body>
 </html>
