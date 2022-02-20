@@ -6,6 +6,7 @@
         box-sizing: border-box;
       }
       #base{
+        visibility : hidden;
         height: 300px;
         width: 180px;
         position: absolute;
