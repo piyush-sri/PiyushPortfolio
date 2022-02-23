@@ -1,10 +1,5 @@
 /* created by : SwapniL */
-/* script for Fill-The-Bucket-II */
-      alert("Hi, i'm SwapniL, creator of this game. Plz Read the instructions carefully..");
-      
-      alert("Tap on the water pipes to rotate them. After setting up the pipes in the correct angles click the fill button to fill the bucket..");
-
-      alert("good luck 👍🏻");
+/* script-2 for Fill-The-Bucket-II */
 
       function fillBucket(){
         const bkt = document.querySelector("#bucket");
@@ -20,7 +15,7 @@
         const wtr = document.querySelector("#water");
         
        if(rotation[2]==180 && rotation[3]==180 && (rotation[6]==0 || rotation[6]==180) && rotation[7]==90 && (rotation[8]==0 || rotation[8]==180) && rotation[9]==90 && rotation[10]==180 && rotation[11]==180){
-         alert("congrats 🥳 you filled your bucket..");
+         alert("congrats 🥳 you won..");
          setTimeout(showMsg, 26000);
          setTimeout(fillBucket, 25000);
 
