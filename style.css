@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    #base{
+      height: 100vh;
+      width: 100%;
+      perspective: 1px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .parallax{
+      height: 300px;
+      width: 100%;
+      position: relative;
+      /* background-color: red; */
+    }
+    .python{
+      transform: translateZ(-1) scale(1);
+      left: calc(100% - 200px);
+      /* background-color: teal; */
+      top: 50px;
+    }
+    .cpp{
+      transform: translateZ(-1px) scale(1.5);
+      /* background-color: aqua; */
+      left: 90%;
+    }
+    .html{
+      transform: translateZ(0px) scale(1);
+      /* background-color: lightgreen; */
+      left: calc(100% - 200px);
+    }
+    .c{
+      transform: translateZ(-2px) scale(3);
+      left: -100px;
+      /* background-color: skyblue; */
+    }
+    .css{
+      transform: translateZ(-1px) scale(1.5);
+      /* background-color: pink; */
+      left: calc(100% - 200px);
+    }
+    .java{
+      transform: translateZ(-3px) scale(2);
+      /* background-color: red; */
+      left: -100px;
+    }
+    .js{
+      transform: translateZ(-3px) scale(2);
+      /* background-color: red; */
+      left: -100px;
+    }
+    .kotlin{
+      transform: translateZ(-2px) scale(2);
+      /* background-color: red; */
+      left: calc(100% - 0px);
+    }
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 200px;
+      position: absolute;
+      font-size: 3em;
+    }
+    header{
+      height: 15vh;
+      width: 100%;
+      background-color: purple;
+    }
+    h1{
+      font-size: 2em;
+      text-align: center;
+      color: white;
+      letter-spacing: 0.1em;
+    }
+    nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: calc(100% - 4em);
+    }
+    li{
+      display: inline-block;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+      padding: 0 0.8em;
+    }
+    li:hover a{
+      border: 1px solid aqua;
+    }
+    #myskill{
+      height: 50px;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.398);
+      color: white;
+      position: absolute;
+      top: calc(50% - 25px);
+      left: calc(50% - 100px);
+    }
+    footer{
+      height: 15vh;
+      width: 100%;
+      background-color: purple;
+    }
