@@ -19,6 +19,7 @@
       card.style.position = 'absolute';
       card.style.backgroundColor = 'black';
       card.style.color = 'white';
+      card.style.zIndex = 0x2710;
       card.style.height = 0x12c+'px';
       card.style.width = 0xdc+'px';
       card.style.borderRadius = 0xa+'px';
