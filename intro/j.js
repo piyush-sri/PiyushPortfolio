@@ -1,22 +1,20 @@
-
     function show(){
-      const body = document.querySelector('body');
-      body.style.margin = 0x0;
-      body.style.padding = 0x0;
-      body.style.boxSizing = 'border-box';
+      const bodyTag = document.querySelector('body');
+      bodyTag.style.margin = 0x0;
+      bodyTag.style.padding = 0x0;
+      bodyTag.style.boxSizing = 'border-box';
 
-      const bg = document.createElement('div');
-      bg.setAttribute('id', 'bg');
-      bg.style.fontFamily = 'monospace';
-      bg.style.position = 'absolute';
-      bg.style.top = 0x0;
-      bg.style.backgroundColor = 'rgb(0, 0, 0, 0.75)';
-      bg.style.height = 0x64+'vh';
-      bg.style.width = 0x64+'vw';
-      body.appendChild(bg);
+      const surface = document.createElement('div');
+      surface.setAttribute('id', 'surface-id');
+      surface.style.fontFamily = 'monospace';
+      surface.style.position = 'absolute';
+      surface.style.top = 0x0;
+      surface.style.backgroundColor = 'rgb(0, 0, 0, 0.75)';
+      surface.style.height = 0x64+'vh';
+      surface.style.width = 0x64+'vw';
+      bodyTag.appendChild(surface);
 
       const card = document.createElement('div');
-      card.setAttribute('id', 'card');
       card.style.position = 'absolute';
       card.style.backgroundColor = 'black';
       card.style.color = 'white';
@@ -37,42 +35,44 @@
         iterations : 0x1,
         easing : 'linear'
       });
-      bg.appendChild(card);
+      surface.appendChild(card);
 
-      const para0 = document.createElement('h3');
-      para0.style.textAlign = 'center';
+      const imgHead = document.createElement('h3');
+      imgHead.style.textAlign = 'center';
       
-      const img = document.createElement('img');
-      img.style.height = 0x50+'px';
-      img.style.width = 0x6e+'px';
-      img.src = 'https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif';
-      para0.appendChild(img);
-      card.appendChild(para0);
+      const imgTag = document.createElement('img');
+      imgTag.style.height = 0x50+'px';
+      imgTag.style.width = 0x6e+'px';
+      imgTag.src = 'https://i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif';
+      imgHead.appendChild(imgTag);
+      card.appendChild(imgHead);
 
-      const headText = document.createTextNode('Created by: SwapniL');
+      const headTagText = document.createTextNode('Created by: SwapniL');
 
-      const head = document.createElement('h3');
-      head.style.textAlign = 'center';
-      head.style.fontSize = 0x10+'px';
-      head.appendChild(headText);
-      card.appendChild(head);
+      const headTextTag = document.createElement('h3');
+      headTextTag.style.textAlign = 'center';
+      headTextTag.style.fontSize = 0x10+'px';
+      headTextTag.appendChild(headTagText);
+      card.appendChild(headTextTag);
 
-      const para1Text = document.createTextNode('You are free to use my code but don’t claim it as yours publicly.');
+      const paraTagText = document.createTextNode('You are free to use my code but don’t claim it as yours publicly.');
 
-      const para1 = document.createElement('h3');
-      para1.style.textAlign = 'justify';
-      para1.style.fontSize = 0xe+'px';
-      para1.style.padding = '0 1em';
-      para1.appendChild(para1Text);
-      card.appendChild(para1);
+      const paraTextTag = document.createElement('h3');
+      paraTextTag.style.textAlign = 'justify';
+      paraTextTag.style.marginTop = 0xe+'px';
+      paraTextTag.style.fontSize = 0xe+'px';
+      paraTextTag.style.padding = '0 1em';
+      paraTextTag.appendChild(paraTagText);
+      card.appendChild(paraTextTag);
 
-      const para2Text = document.createTextNode('(Make it Private else)');
+      const headTag2Text = document.createTextNode('(Make it Private else)');
 
-      const para2 = document.createElement('h1');
-      para2.style.textAlign = 'center';
-      para2.style.fontSize = 0xe+'px';
-      para2.appendChild(para2Text);
-      card.appendChild(para2);
+      const headTag2 = document.createElement('h1');
+      headTag2.style.textAlign = 'center';
+      headTag2.style.marginTop = 0xe+'px';
+      headTag2.style.fontSize = 0xe+'px';
+      headTag2.appendChild(headTag2Text);
+      card.appendChild(headTag2);
 
       const para3 = document.createElement('h3');
       para3.style.textAlign = 'center';
@@ -89,5 +89,5 @@
       button.setAttribute('onclick', 'hideCard()');
     }
     function hideCard(){
-      document.body.removeChild(document.getElementById('bg'));
+      document.body.removeChild(document.getElementById('surface-id'));
     }
