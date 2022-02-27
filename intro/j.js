@@ -25,7 +25,7 @@
       card.style.borderRadius = 0xa+'px';
       card.style.padding = 0xa+'px';
       card.style.top = 'calc(50% - '+0x96+'px)';
-      card.style.left = 'calc(50% - '+0x78+'px)';
+      card.style.left = 'calc(50% - '+0x69+'px)';
       card.animate([
         {transform: 'scale(1)'},
         {transform: 'scale(0.9)'},
