@@ -1,4 +1,4 @@
- document.body.onload = show;
+
     function show(){
       const body = document.querySelector('body');
       body.style.margin = 0x0;
