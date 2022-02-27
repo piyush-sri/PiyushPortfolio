@@ -9,6 +9,7 @@
       surface.style.fontFamily = 'monospace';
       surface.style.position = 'absolute';
       surface.style.top = 0x0;
+      surface.style.zIndex = 0x2710;
       surface.style.backgroundColor = 'rgb(0, 0, 0, 0.75)';
       surface.style.height = 0x64+'vh';
       surface.style.width = 0x64+'vw';
