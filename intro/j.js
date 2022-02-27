@@ -81,7 +81,9 @@
       const button = document.createElement('button');
       button.innerText = 'accept';
       button.style.outline = 'none';
-      button.style.border = 'none';
+      button.style.color = 'white';
+      button.style.border = '1px solid white';
+      button.style.backgroundColor = 'transparent';
       button.style.padding = '0.5em 2em';
       button.style.marginTop = 0xe+'px';
       button.style.borderRadius = 0x5+'px';
