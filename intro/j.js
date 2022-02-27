@@ -1,4 +1,47 @@
-    function show(){
+/*  created by : SwapniL 
+    last modified : 27-FEB-2022
+    Do not copy my codes without my permission. 
+    You can't use my code in your projects without
+    giving credit to the original creator.    
+    You are free to use my code only when 
+    you don’t claim it as yours publicly.
+    
+    मेरी अनुमति के बिना मेरे कोड कॉपी न करें। 
+    आप मूल निर्माता को श्रेय दिए बिना अपने प्रोजेक्ट
+    में मेरे कोड का उपयोग नहीं कर सकते। 
+    आप मेरे कोड का उपयोग तभी कर सकते हैं जब
+    आप इसे सार्वजनिक रूप से अपना होने का दावा नहीं करते हैं।
+*/
+    document.addEventListener('DOMContentLoaded', () => {
+      const base = document.querySelector('#base');
+      base.style.visibility = "hidden";
+    });
+
+    window.onload = ()=>{
+      showLoader();
+    }
+
+    function showLoader(){
+      const bodyTag = document.querySelector('body');
+      const loaderTag = document.createElement('img');
+      loaderTag.setAttribute('id', 'loader');
+      loaderTag.src = 'https://icons8.com/preloaders/preloaders/285/Moving%20blocks.gif';
+      loaderTag.style.height = 0x64+'px';
+      loaderTag.style.width = 0x64+'px';
+      loaderTag.style.position = 'absolute';
+      loaderTag.style.top = 'calc(50% - '+0x32+'px)';
+      loaderTag.style.left = 'calc(50% - '+0x32+'px)';
+      bodyTag.appendChild(loaderTag);
+      setTimeout(displayContent, 0x3E8);
+    }
+
+    function displayContent(){
+      const loader = document.getElementById('loader');
+      loader.style.visibility = "hidden";
+      showIntroCard();
+    }
+
+    function showIntroCard(){
       const bodyTag = document.querySelector('body');
       bodyTag.style.margin = 0x0;
       bodyTag.style.padding = 0x0;
@@ -90,8 +133,25 @@
       button.style.marginTop = 0xe+'px';
       button.style.borderRadius = 0x5+'px';
       para3.appendChild(button);
-      button.setAttribute('onclick', 'hideCard()');
+      button.setAttribute('onclick', 'hideIntroCard()');
     }
-    function hideCard(){
+    function hideIntroCard(){
       document.body.removeChild(document.getElementById('surface-id'));
+      const base = document.getElementById('base');
+      base.style.visibility = "visible";
     }
+
+/*  created by : SwapniL 
+    last modified : 27-FEB-2022
+    Do not copy my codes without my permission. 
+    You can't use my code in your projects without
+    giving credit to the original creator.    
+    You are free to use my code only when 
+    you don’t claim it as yours publicly.
+    
+    मेरी अनुमति के बिना मेरे कोड कॉपी न करें। 
+    आप मूल निर्माता को श्रेय दिए बिना अपने प्रोजेक्ट
+    में मेरे कोड का उपयोग नहीं कर सकते। 
+    आप मेरे कोड का उपयोग तभी कर सकते हैं जब
+    आप इसे सार्वजनिक रूप से अपना होने का दावा नहीं करते हैं।
+*/
