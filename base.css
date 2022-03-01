@@ -11,6 +11,7 @@ header{
   background-color: purple;
 }
 h1{
+  min-width: 240px;
   font-size: 2em;
   text-align: center;
   color: white;
@@ -24,18 +25,35 @@ nav{
   top: calc(100% - 4em);
 }
 li{
+  
   display: inline-block;
 }
 a{
   text-decoration: none;
   color: white;
-  padding: 0 0.8em;
 }
-li:hover a{
+li:hover > a{
   border: 1px solid aqua;
 }
 footer{
-  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
   width: 100%;
   background-color: purple;
+}
+
+@media screen and (min-width:320px) {
+  a{
+    padding: 0 1em;
+  }
+}
+@media screen and (min-width:270px) {
+  a{
+    padding: 0 0.4em;
+  }
+  nav{
+    min-width: 250px;
+  }
 }
