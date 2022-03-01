@@ -4,35 +4,36 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 header{
   height: 15vh;
   width: 100%;
   background-color: purple;
 }
-h1{
+header h1, footer h1{
   min-width: 240px;
   font-size: 2em;
   text-align: center;
   color: white;
   letter-spacing: 0.1em;
 }
-nav{
+header nav{
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   top: calc(100% - 4em);
 }
-li{
+nav li{
   
   display: inline-block;
 }
-a{
+nav li a{
   text-decoration: none;
   color: white;
 }
-li:hover > a{
+nav li:hover > a{
   border: 1px solid aqua;
 }
 footer{
