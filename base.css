@@ -17,17 +17,23 @@ header h1, footer h1{
   text-align: center;
   color: white;
   letter-spacing: 0.1em;
+  position: relative;
+  top: 20px;
 }
-header nav{
+header nav, footer nav{
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  top: calc(100% - 4em);
+  top: calc(100% - 60px);
 }
-nav li{
-  
+header nav li{
   display: inline-block;
+}
+footer{
+  height: 25vh;
+  width: 100%;
+  background-color: purple;
 }
 nav li a{
   text-decoration: none;
@@ -36,25 +42,36 @@ nav li a{
 nav li:hover > a{
   border: 1px solid aqua;
 }
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25vh;
-  width: 100%;
-  background-color: purple;
+nav li{
+  list-style: none;
+  width: fit-content;
+}
+
+footer nav{
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  position: relative;
+  top: calc(100% - 80px);
+}
+
+footer li{
+  display: inline-block;
 }
 
 @media screen and (min-width:320px) {
   a{
-    padding: 0 1em;
+    padding: 0 0.5em;
   }
 }
-@media screen and (min-width:270px) {
+
+@media screen and (min-width:250px) and (max-width:320px) {
   a{
-    padding: 0 0.4em;
+    padding: 0 0.3em;
   }
+}
+
+@media screen and (max-width:280px) {
   nav{
-    min-width: 250px;
+    width: 260px;
   }
 }
