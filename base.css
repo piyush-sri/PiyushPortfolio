@@ -59,6 +59,10 @@ footer li{
 }
 
 @media screen and (max-width:420px) {
+  footer ul{
+    position: relative;
+    top: -20px;
+  }
   footer li{
     display: block;
     padding: 0.5em 0.5em 0 0.5em;
