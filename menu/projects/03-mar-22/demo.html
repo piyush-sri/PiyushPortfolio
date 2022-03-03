@@ -1,0 +1,116 @@
+<!--
+    created by : SwapniL 
+    last modified : 02-Mar-2022 
+    You can't use my code in your projects without
+    giving credit to the original creator.    
+    You are free to use my code only when 
+    you don’t claim it as yours publicly.
+    
+    आप मूल निर्माता को श्रेय दिए बिना अपने प्रोजेक्ट
+    में मेरे कोड का उपयोग नहीं कर सकते। 
+    आप मेरे कोड का उपयोग तभी कर सकते हैं जब
+    आप इसे सार्वजनिक रूप से अपना होने का दावा नहीं करते हैं।
+-->
+<!-- created by : SwapniL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Accordion</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width:100%;
+        }
+        .base{
+            height: 250px;
+            width: 320px;
+            position:absolute;
+            top: 50px;
+            left:calc(50% - 160px);
+            position: relative;
+            overflow: hidden;
+        }
+        .pics{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s;
+        }
+        .one{
+            z-index: 1;
+        }
+        .two{
+            z-index: 2;
+            transform: translateX(80px);
+        }
+        .three{
+            z-index: 3;
+            transform: translateX(160px);
+        }
+        .four{
+            z-index: 4;
+            transform: translateX(240px);
+        }
+        .one:hover ~ img, #first:checked ~ img{
+            transform: translateX(320px);
+        }
+        .two:hover{
+            transform: translateX(0px);
+        }
+        .two:hover ~ img{
+            transform: translateX(320px);
+        }
+        .three:hover{
+            transform: translateX(0px);
+        }
+        .three:hover ~ img{
+            transform: translateX(320px);
+        }
+        .four:hover{
+            transform: translateX(0px);
+        }
+        
+        .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 80px);
+        }
+        .yt > a{
+        height : 40px;
+        width : 100px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color:teal;
+        text-decoration : none;
+        color : white;
+        border-radius: 5px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <img class="pics one" src="https://thumbs.dreamstime.com/b/very-funny-cat-smile-cardboard-110505677.jpg" alt="first cat">
+        <img class="pics two" src="https://pbs.twimg.com/profile_images/1311008414156423170/Kxu_7mQS_400x400.jpg" alt="">
+        <img class="pics three" src="https://i.pinimg.com/564x/16/ca/b1/16cab153397fc070d5369635ba891e8d.jpg" alt="">
+        <img class="pics four" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3jFfyOaNXj6N5afRXw1Ua5Lew9sO7FFwPtQ&usqp=CAU" alt="">
+    </div>  
+    <div class="yt">
+        <a href="https://youtu.be/HgEb9eYUVCw"
+        target="_blank">let's learn</a>
+    </div>
+</body>
+</html>
