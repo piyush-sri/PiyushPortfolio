@@ -39,6 +39,30 @@
     gtag('js', new Date());
     gtag('config', 'G-JNFK9HLVDJ');
   </script>
+  <style>
+    .form-group{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1em;
+    }
+    input{
+      border: none;
+      outline: none;
+      border-bottom: 1px solid black;
+      padding: 0.2em;
+    }
+    label{
+      margin: 0.2em;
+    }
+    textarea{
+      outline: none;
+      padding: 0.2em;
+    }
+    button{
+      padding: 0.4em;
+    }
+  </style>
 </head>
 <body>
   <div id="base">
@@ -54,20 +78,24 @@
     </header>
       <h3>Contact us</h3>
     <main>
-        <form method="POST" action="https://formspree.io/f/xeqnkzkj" autocomplete="off">
-          <div>
-            <p><label for="Name" >Your name</label></p>
-            <p><input type="text" id="Name" name="Name" required></p>
-          </div>
-          <div>
-            <p><label for="Email">Your email address</label></p>
-            <p><input type="email" id="Email" name="Email" required></p>
-          </div>
-          <div>
-            <p><label for="Message">Your message</label></p>
-            <p><textarea id="Message" name="Message" rows="6" maxlength="3000" required></textarea></p>
-          </div>
-          <p><button type="submit">Send</button></p>
+      <form id="my-form" action="https://formspree.io/f/xeqnkzkj" method="POST" autocomplete="off">
+        <div class="form-group">
+          <label for="uname">: Name :</label>
+          <input title="enter your name here" type="text" name="uname" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">: Email :</label>
+          <input title="enter your email id here" type="email" name="email" required/>
+        </div>
+        <div class="form-group">
+          <label for="message">: Message :</label>
+          <textarea title="enter your message here" name="message" rows="5" cols="24" required></textarea>
+        </div>
+        <div class="form-group">
+          <button id="my-form-button">Submit</button>
+        </div>
+        <p id="my-form-status"></p>
+      </form>
     </main>
     <footer>
       <h1>Swapnil's Lab</h1>
@@ -82,5 +110,36 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      var form = document.getElementById("my-form");
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              }
+            })
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+      }
+      form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
 </html>
