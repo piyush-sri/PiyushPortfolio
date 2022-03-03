@@ -17,15 +17,17 @@
       padding: 0 1em;
     }
     p{
-      text-align: justify;
+      text-align: center;
       margin: 1em;
-      padding: 0 1em;
     }
     main{
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 1em;
+    }
+    textarea{
+      resize: vertical;
     }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1125167762947771" crossorigin="anonymous"></script>
@@ -52,22 +54,20 @@
     </header>
       <h3>Contact us</h3>
     <main>
-        <form method="post" action="mailto:lab.swapnil@gmail.com" autocomplete="off">
-          <label for="Name" >Your name</label>
+        <form method="POST" action="https://formspree.io/f/xeqnkzkj" autocomplete="off">
           <div>
-              <input type="text" id="Name" name="Name" required>
-          </div>
-          <label for="Email">Your email address</label>
-          <div>
-              <input type="email" id="Email" name="Email" required>
-          </div>
-          <label for="Message">Your message</label>
-          <div>
-              <textarea id="Message" name="Message" rows="6" maxlength="3000" required></textarea>
+            <p><label for="Name" >Your name</label></p>
+            <p><input type="text" id="Name" name="Name" required></p>
           </div>
           <div>
-              <button type="submit">Send</button>
+            <p><label for="Email">Your email address</label></p>
+            <p><input type="email" id="Email" name="Email" required></p>
           </div>
+          <div>
+            <p><label for="Message">Your message</label></p>
+            <p><textarea id="Message" name="Message" rows="6" maxlength="3000" required></textarea></p>
+          </div>
+          <p><button type="submit">Send</button></p>
     </main>
     <footer>
       <h1>Swapnil's Lab</h1>
