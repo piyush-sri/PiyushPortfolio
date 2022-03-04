@@ -6,8 +6,14 @@
   font-family: 'Ubuntu', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
-header{
-  height: 15vh;
+
+#base header table, #base footer table{
+  height: 100%;
+  width: 100%;
+}
+
+#base header{
+  height: 100px;
   width: 100%;
   background-color: purple;
 }
@@ -16,22 +22,15 @@ header h1, footer h1{
   font-size: 2em;
   text-align: center;
   color: white;
-  letter-spacing: 0.1em;
   position: relative;
-  top: 20px;
 }
 header nav, footer nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: calc(100% - 60px);
 }
-header nav li{
-  display: inline-block;
-}
-footer{
-  height: 25vh;
+#base footer{
+  height: 150px;
   width: 100%;
   background-color: purple;
 }
@@ -44,17 +43,6 @@ nav li:hover > a{
 }
 nav li{
   list-style: none;
-  width: fit-content;
-}
-
-footer nav{
-  margin-bottom: 50px;
-  padding-bottom: 10px;
-  position: relative;
-  top: calc(100% - 100px);
-}
-
-footer li{
   display: inline-block;
 }
 
@@ -65,7 +53,7 @@ footer li{
   }
   footer li{
     display: block;
-    padding: 0.5em 0.5em 0 0.5em;
+    padding: 0.4em 0.4em 0 0.4em;
   }
 }
 
