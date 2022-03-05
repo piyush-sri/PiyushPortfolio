@@ -20,83 +20,6 @@
     gtag('js', new Date());
     gtag('config', 'G-JNFK9HLVDJ');
   </script>
-  <!-- 
-</head>
-<body>
-    <div id="base">
-    <header>
-      <table>
-        <tr>
-          <td>
-            <h1>Swapnil's Lab</h1>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu/projects/project.html">Projects</a></li>
-                <li><a href="games/games.html">Games</a></li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
-    </header>
-    <div class="python parallax">
-      <span>Python</span>
-    </div>
-    <div class="java parallax">
-      <span>Java</span>
-    </div>
-    <div class="cpp parallax">
-      <span>C++</span>
-    </div>
-    <div class="c parallax">
-      <span>C</span>
-    </div>
-    <div class="html parallax">
-      <span>HTML</span>
-    </div>
-    <div class="css parallax">
-      <span>CSS</span>
-    </div>
-    <div class="sql parallax">
-      <span>SQL</span>
-    </div>
-    <div class="js parallax">
-      <span>JavaScript</span>
-    </div>
-    <div class="kotlin parallax">
-      <span>Kotlin</span>
-    </div>
-    <footer>
-      <table>
-        <tr>
-          <td>
-            <h1>Swapnil's Lab</h1>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu/about/about.html">About Us</a></li>
-              </ul>
-              <ul>
-                <li><a href="menu/contact/contact.html">Contact Us</a></li>
-                <li><a href="menu/contact/privacy-policy.html">Privacy Policy</a></li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-      </table>
-    </footer>
-  </div>
-</body>
-</html> -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
   *{
@@ -113,17 +36,13 @@
       background-size: 100% 100%;
   }
   .container{
-      height: 97%;
+      height: 100vh;
       width: 100%;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      perspective: 1px;
-  }
-  .parallax-container {
-    transform-style: preserve-3d;
+      position: relative;
+      overflow: hidden;
   }
   .bubble{
-      position: absolute;
+      position: relative;
       top: 0;
       right: 0;
       bottom: 0;
@@ -143,86 +62,6 @@
       transform: rotate(-45deg);
       box-shadow: 0px 0px 20vw 2vw white;
   }
-  .python{
-      position: relative;
-      top: 30vh;
-      left: 120vw;
-      height: 50vw;
-      width: 50vw;
-      max-height: 500px;
-      max-width: 500px;
-      font-size: 8vw;
-      transform: translateZ(-2px) scale(1.2);
-  }
-  .c{
-      position: absolute;
-      top: 500vh;
-      left: 30vw;
-      height: 30vw;
-      width: 30vw;
-      max-height: 300px;
-      max-width: 300px;
-      font-size: 8vw;
-      transform: translateZ(-1px);
-  }
-  .java{
-      position: absolute;
-      top: 600vh;
-      left: -80vw;
-      height: 50vw;
-      width: 50vw;
-      font-size: 10vw;
-      transform: translateZ(-3px) scale(1.2);
-  }
-  .css{
-      position: absolute;
-      top: 600vh;
-      left: 200vw;
-      height: 50vw;
-      width: 50vw;
-      font-size: 8vw;
-      transform: translateZ(-4px) scale(2);
-  }
-  .js{
-      position: relative;
-      top: 200vh;
-      left: calc(100vw - 180vw);
-      height: 50vw;
-      width: 50vw;
-      max-height: 600px;
-      max-width: 600px;
-      font-size: 8vw;
-      transform: translateZ(-4px) scale(2);
-  }
-  .cpp{
-      position: absolute;
-      height: 50vw;
-      width: 50vw;
-      max-height: 500px;
-      max-width: 500px;
-      font-size: 8vw;
-      transform: translateZ(-6px) scale(3);
-  }
-  .html{
-      position: absolute;
-      top: 400vh;
-      left: -100vw;
-      height: 50vw;
-      width: 50vw;
-      font-size: 8vw;
-      transform: translateZ(-2px);
-  }
-  .kotlin{
-      position: absolute;
-      top: 300vh;
-      left: 150vw;
-      height: 50vw;
-      width: 50vw;
-      max-height: 500px;
-      max-width: 500px;
-      font-size: 8vw;
-      transform: translateZ(-5px) scale(2);
-  }
   .dummy{
     position: absolute;
     height: 50vw;
@@ -233,46 +72,31 @@
   .fake .bubble:nth-child(1){
     top: 100vh;
     left: 50vw;
-    transform: translateZ(-3px) scale(0.4);
+    transform: scale(0.4);
     animation: float 5s linear infinite;
   }
   .fake .bubble:nth-child(2){
-    top: 200vh;
+    top: 100vh;
     left: 0vw;
-    transform: translateZ(-5px) scale(0.4);
-    animation: float 6s linear infinite;
+    transform: scale(0.4);
+    animation: float 6s 2s linear infinite;
   }
   .fake .bubble:nth-child(3){
-    top: 300vh;
+    top: 100vh;
     left: 20vw;
-    transform: translateZ(-4px) scale(0.4);
+    transform: scale(0.4);
     animation: float 8s linear infinite;
   }
   .fake .bubble:nth-child(4){
-    top: 600vh;
+    top: 100vh;
     left: 30vw;
-    transform: translateZ(-3px) scale(0.4);
-    animation: float 10s linear infinite;
+    transform: scale(0.4);
+    animation: float 10s 2s linear infinite;
   }
   @keyframes float {
     to{
-      top: 100px;
+      top: 10px;
     }
-  }
-  .front{
-      height: 500vh;
-      transform: translateZ(0px);
-  }
-  span{
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 50px;
-      width: 200px;
-      position: absolute;
-      left: calc(50% - 100px);
-      top: calc(50% - 25px);
   }
   header table,footer table{
       height: 100%;
@@ -299,8 +123,8 @@
   footer{
       height: 150px;
       width: 100%;
-      position: relative;
-      top: calc(100vh - 150px);
+      position: absolute;
+      top: calc(100% - 150px);
       background-color: rgba(0, 0, 0, 0.1);
   }
   nav li a{
@@ -314,7 +138,6 @@
       list-style: none;
       display: inline-block;
   }
-
   @media screen and (max-width:420px) {
       footer ul{
           position: relative;
@@ -343,6 +166,33 @@
           width: 260px;
       }
   }
+  img{
+    height: 100px;
+    width: 100px;
+  }
+  .main img:nth-child(1){
+    animation: swim 10s linear infinite;
+  }
+  .main img:nth-child(2){
+    position: absolute;
+    left: -50px;
+    top: 400px;
+    animation: swim 15s linear infinite;
+  }
+  .main img:nth-child(3){
+    position: absolute;
+    left: -50px;
+    top: 200px;
+    animation: swim 10s linear reverse infinite;
+  }
+  @keyframes swim {
+    0%{
+      transform: translateX(0vw);
+    }
+    100%{
+      transform: translateX(100vw);
+    }
+  }
 </style>
 </head>
 <body>
@@ -367,46 +217,16 @@
           </tr>
       </table>
   </header>
-  <div class="parallax-container">
-      <div class="python bubble">
-          <span class="content">Python</span>
-      </div>
-      <div class="js bubble">
-          <span class="content">JavaScript</span>
-      </div>
-      <div class="java bubble">
-          <span class="content">Java</span>
-      </div>
-      <div class="css bubble">
-          <span class="content">CSS</span>
-      </div>
-      <div class="c bubble">
-          <span class="content">C</span>
-      </div>
-      <div class="cpp bubble">
-          <span class="content">C++</span>
-      </div>
-      <div class="html bubble">
-          <span class="content">HTML</span>
-      </div>
-      <div class="kotlin bubble">
-          <span class="content">kotlin</span>
-      </div>
+  <div class="main">
+      <img src="https://thumbs.gfycat.com/ShabbyBriskDoe-max-1mb.gif" alt="">
+      <img src="https://i.pinimg.com/originals/37/00/78/370078bf7be9484883e26e1327132c4e.gif" alt="">
+      <img src="https://math.uni.lodz.pl/~marekbad/webgl/three/img/animated-tropical-fish-5-4.gif" alt="">
       <div class="fake">
-        <div class="dummy bubble">
-          <span class="content"></span>
-        </div>
-        <div class="dummy bubble">
-          <span class="content"></span>
-        </div>
-        <div class="dummy bubble">
-          <span class="content"></span>
-        </div>
-        <div class="dummy bubble">
-          <span class="content"></span>
-        </div>
+        <div class="dummy bubble"></div>
+        <div class="dummy bubble"></div>
+        <div class="dummy bubble"></div>
+        <div class="dummy bubble"></div>
       </div>
-      <div class="front"></div>
   </div>
   <footer>
       <table>
