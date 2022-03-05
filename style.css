@@ -48,30 +48,30 @@ max-width: 500px;
 .fake .bubble:nth-child(1){
 top: 100vh;
 left: 50vw;
-transform: scale(0.4);
+transform: scale(0.2);
 animation: float 5s linear infinite;
 }
 .fake .bubble:nth-child(2){
 top: 100vh;
 left: 0vw;
-transform: scale(0.4);
+transform: scale(0.3);
 animation: float 6s 2s linear infinite;
 }
 .fake .bubble:nth-child(3){
 top: 100vh;
 left: 20vw;
-transform: scale(0.4);
+transform: scale(0.3);
 animation: float 8s linear infinite;
 }
 .fake .bubble:nth-child(4){
 top: 100vh;
 left: 30vw;
-transform: scale(0.4);
+transform: scale(0.2);
 animation: float 10s 2s linear infinite;
 }
 @keyframes float {
 to{
-  top: 10px;
+  top: -20vw;
 }
 }
 header table,footer table{
