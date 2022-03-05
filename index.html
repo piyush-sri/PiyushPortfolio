@@ -9,8 +9,8 @@
   <meta name="keywords" content="HTML, CSS, JavaScript, Programming, Coding, Swapnil Lab, Swapnil's Lab">
   <meta name="author" content="Swapnil">
   <title>Swapnil's Lab || Home</title>
-  <link rel="stylesheet" href="style.css"><link>
-  <link rel="stylesheet" href="base.css">
+  <!-- <link rel="stylesheet" href="style.css"><link> -->
+  <!-- <link rel="stylesheet" href="base.css"> -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1125167762947771" crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNFK9HLVDJ"></script>
@@ -20,9 +20,10 @@
     gtag('js', new Date());
     gtag('config', 'G-JNFK9HLVDJ');
   </script>
+  <!-- 
 </head>
 <body>
-  <div id="base">
+    <div id="base">
     <header>
       <table>
         <tr>
@@ -94,5 +95,290 @@
       </table>
     </footer>
   </div>
+</body>
+</html> -->
+<style>
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body{
+      height: 100vh;
+      width: 100%;
+      background-image: url('https://c1.wallpaperflare.com/preview/658/973/231/sea-ocean-underwater-water.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+  }
+  .container{
+      height: 97%;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      perspective: 1px;
+  }
+  .parallax-container {
+    transform-style: preserve-3d;
+  }
+  .bubble{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: white;
+      border-radius: 50%;
+      box-shadow: inset 5px 5px 20px white;
+  }
+  .bubble::after{
+      content: "";
+      display: block;
+      position: relative;
+      left: 10%;
+      top: 30%;
+      height: 0px;
+      width: 10vw;
+      transform: rotate(-45deg);
+      box-shadow: 0px 0px 20vw 2vw white;
+  }
+  .python{
+      position: relative;
+      top: 30vh;
+      left: 120vw;
+      height: 50vw;
+      width: 50vw;
+      max-height: 500px;
+      max-width: 500px;
+      font-size: 8vw;
+      transform: translateZ(-2px) scale(1.2);
+  }
+  .c{
+      position: absolute;
+      top: 500vh;
+      left: 30vw;
+      height: 30vw;
+      width: 30vw;
+      max-height: 300px;
+      max-width: 300px;
+      font-size: 8vw;
+      transform: translateZ(-1px);
+  }
+  .java{
+      position: absolute;
+      top: 600vh;
+      left: -80vw;
+      height: 50vw;
+      width: 50vw;
+      font-size: 10vw;
+      transform: translateZ(-3px) scale(1.2);
+  }
+  .css{
+      position: absolute;
+      top: 600vh;
+      left: 200vw;
+      height: 50vw;
+      width: 50vw;
+      font-size: 8vw;
+      transform: translateZ(-4px) scale(2);
+  }
+  .js{
+      position: relative;
+      top: 200vh;
+      left: calc(100vw - 180vw);
+      height: 50vw;
+      width: 50vw;
+      max-height: 600px;
+      max-width: 600px;
+      font-size: 8vw;
+      transform: translateZ(-4px) scale(2);
+  }
+  .cpp{
+      position: absolute;
+      height: 50vw;
+      width: 50vw;
+      max-height: 500px;
+      max-width: 500px;
+      font-size: 8vw;
+      transform: translateZ(-6px) scale(3);
+  }
+  .html{
+      position: absolute;
+      top: 400vh;
+      left: -100vw;
+      height: 50vw;
+      width: 50vw;
+      font-size: 8vw;
+      transform: translateZ(-2px);
+  }
+  .kotlin{
+      position: absolute;
+      top: 300vh;
+      left: 150vw;
+      height: 50vw;
+      width: 50vw;
+      max-height: 500px;
+      max-width: 500px;
+      font-size: 8vw;
+      transform: translateZ(-5px) scale(2);
+  }
+  .front{
+      height: 500vh;
+      transform: translateZ(0px);
+  }
+  span{
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 200px;
+      position: absolute;
+      left: calc(50% - 100px);
+      top: calc(50% - 25px);
+  }
+  header table,footer table{
+      height: 100%;
+      width: 100%;
+  }
+  header{
+    position: absolute;
+      height: 100px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+  }
+  header h1, footer h1{
+      min-width: 240px;
+      font-size: 2em;
+      text-align: center;
+      color: white;
+      position: relative;
+  }
+  header nav, footer nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  footer{
+      height: 150px;
+      width: 100%;
+      position: relative;
+      top: calc(100vh - 150px);
+      background-color: rgba(0, 0, 0, 0.1);
+  }
+  nav li a{
+      text-decoration: none;
+      color: white;
+  }
+  nav li:hover > a{
+      border: 1px solid aqua;
+  }
+  nav li{
+      list-style: none;
+      display: inline-block;
+  }
+
+  @media screen and (max-width:420px) {
+      footer ul{
+          position: relative;
+          top: -20px;
+      }
+      footer li{
+          display: block;
+          padding: 0.4em 0.4em 0 0.4em;
+      }
+  }
+
+  @media screen and (max-width:250px) {
+      a{
+          padding: 0 0.2em;
+      }
+  }
+
+  @media screen and (min-width:250px) {
+      a{
+          padding: 0 0.5em;
+      }
+  }
+
+  @media screen and (max-width:280px) {
+      nav{
+          width: 260px;
+      }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+      <table>
+          <tr>
+              <td>
+                  <h1>Swapnil's Lab</h1>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <nav>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="menu/projects/project.html">Projects</a></li>
+                      <li><a href="games/games.html">Games</a></li>
+                    </ul>
+                  </nav>
+              </td>
+          </tr>
+      </table>
+  </header>
+  <div class="parallax-container">
+      <div class="python bubble">
+          <span class="content">Python</span>
+      </div>
+      <div class="js bubble">
+          <span class="content">JavaScript</span>
+      </div>
+      <div class="java bubble">
+          <span class="content">Java</span>
+      </div>
+      <div class="css bubble">
+          <span class="content">CSS</span>
+      </div>
+      <div class="c bubble">
+          <span class="content">C</span>
+      </div>
+      <div class="cpp bubble">
+          <span class="content">C++</span>
+      </div>
+      <div class="html bubble">
+          <span class="content">HTML</span>
+      </div>
+      <div class="kotlin bubble">
+          <span class="content">kotlin</span>
+      </div>
+      <div class="front"></div>
+  </div>
+  <footer>
+      <table>
+          <tr>
+              <td>
+                  <h1>Swapnil's Lab</h1>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <nav>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="menu/about/about.html">About Us</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="menu/contact/contact.html">Contact Us</a></li>
+                      <li><a href="menu/contact/privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                  </nav>
+              </td>
+          </tr>
+      </table>
+  </footer>
+</div>
 </body>
 </html>
