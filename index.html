@@ -223,6 +223,42 @@
       font-size: 8vw;
       transform: translateZ(-5px) scale(2);
   }
+  .dummy{
+    position: absolute;
+    height: 50vw;
+    width: 50vw;
+    max-height: 500px;
+    max-width: 500px;
+  }
+  .fake .bubble:nth-child(1){
+    top: 100vh;
+    left: 50vw;
+    transform: translateZ(-3px) scale(0.4);
+    animation: float 5s linear infinite;
+  }
+  .fake .bubble:nth-child(2){
+    top: 200vh;
+    left: 0vw;
+    transform: translateZ(-5px) scale(0.4);
+    animation: float 6s linear infinite;
+  }
+  .fake .bubble:nth-child(3){
+    top: 300vh;
+    left: 20vw;
+    transform: translateZ(-4px) scale(0.4);
+    animation: float 8s linear infinite;
+  }
+  .fake .bubble:nth-child(4){
+    top: 600vh;
+    left: 30vw;
+    transform: translateZ(-3px) scale(0.4);
+    animation: float 10s linear infinite;
+  }
+  @keyframes float {
+    to{
+      top: 100px;
+    }
+  }
   .front{
       height: 500vh;
       transform: translateZ(0px);
@@ -355,6 +391,20 @@
       </div>
       <div class="kotlin bubble">
           <span class="content">kotlin</span>
+      </div>
+      <div class="fake">
+        <div class="dummy bubble">
+          <span class="content"></span>
+        </div>
+        <div class="dummy bubble">
+          <span class="content"></span>
+        </div>
+        <div class="dummy bubble">
+          <span class="content"></span>
+        </div>
+        <div class="dummy bubble">
+          <span class="content"></span>
+        </div>
       </div>
       <div class="front"></div>
   </div>
