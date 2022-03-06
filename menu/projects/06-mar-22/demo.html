@@ -1,0 +1,130 @@
+<!-- created by : SwapniL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shimmer loading Animation</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content:center;
+    }
+    .card{
+      height: 300px;
+      width: 280px;
+      position:relative;
+      top: 10vh;
+      background-color: purple;
+      display : flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      flex-direction: column;
+    }
+    .card div{
+      margin: 0.8em;
+    }
+    .first, .third{
+      height: 50px;
+      width: 220px;
+      background-color: rgba(216,216,216,0.5);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .first::before{
+      content: "";
+      display: block;
+      background-color: rgba(255,255,255,0.5);
+      height: 50px;
+      width: 50px;
+      transform: skew(20deg);
+      position: relative;
+      left: -110px;
+      animation: load 3s linear infinite;
+    }
+    .second{
+      height: 100px;
+      width: 220px;
+      border-radius: 10px;
+      background-color: rgba(216,216,216,0.5);
+      overflow: hidden;
+    }
+    .second::before{
+      content: "";
+      display: block;
+      background-color: rgba(255,255,255,0.5);
+      height: 100px;
+      width: 50px;
+      transform: skew(20deg);
+      position: relative;
+      left: -80px;
+      animation: load 3s linear infinite;
+    }
+    .third::before{
+      content: "";
+      display: block;
+      background-color: rgba(255,255,255,0.5);
+      height: 50px;
+      width: 50px;
+      transform: skew(20deg);
+      position: relative;
+      left: -50px;
+      animation: load 3s linear forwards infinite;
+    }
+    @keyframes load {
+      70%{
+        transform: translateX(350px) skew(20deg);
+      }
+      100%{
+          transform: translateX(350px) skew(20deg);
+      }
+    }
+
+/* CSS rule for youtube link (starts) */
+    .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 80px);
+     }
+     .yt > a{
+        height : 40px;
+        width : 100px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color:purple;
+        text-decoration : none;
+        color : white;
+        border-radius: 5px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 50px);
+      }
+/* CSS rules for youtube link (ends) */
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+  </div>
+<!-- markup for youtube link (starts)-->
+  <div class="yt">
+      <a href="https://youtu.be/5faWaoDO_Ek"
+       target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends)-->
+</body>
+</html>
