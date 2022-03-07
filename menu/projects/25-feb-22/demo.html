@@ -1,0 +1,103 @@
+<!-- created by : SwapniL -->
+<!-- project name : Typewriter Animation -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Animation</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: monospace;
+    }
+    body{
+      background-color: black;
+      color: white;
+    }
+    #base{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #text-box{
+      width: 25ch;
+      white-space: nowrap;
+      overflow-x: hidden;
+      border-right: 2px solid red;
+      font-size: 1.8em;
+      animation: 
+      blink 0.8s linear infinite alternate,
+      typing 4s steps(25);
+    }
+
+/* CSS rule for cursor blink (starts) */
+    @keyframes blink {
+      50%{
+        border-right-color: transparent;
+      }
+    }
+/* CSS rule for cursor blink (ends) */
+
+/* CSS rule for typing effect (starts) */
+    @keyframes typing {
+      from{
+        width: 0ch;
+      }
+      to{
+        width: 25ch;
+      }
+    }
+/* CSS rule for typing effect (ends) */
+
+/* CSS rule for youtube link (starts) */
+    .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 100px);
+    }
+    a{
+        height : 40px;
+        width : 100px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color:teal;
+        text-decoration : none;
+        color : white;
+        border-radius: 5px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 50px);
+    }
+/* CSS rule for youtube link (ends) */
+
+  </style>
+</head>
+<body>
+  
+  <div id="base">
+    <div id="text-box">Welcome to Swapnil's Lab.</div>
+  </div>
+
+<!-- markup for youtube link (starts)-->
+  <div class="yt">
+    <a href="https://youtu.be/dwWSywV4be4"
+     target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends)-->
+
+</body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project name : Typewriter Animation -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->

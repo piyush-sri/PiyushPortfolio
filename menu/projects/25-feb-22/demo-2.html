@@ -1,0 +1,119 @@
+<!-- created by : SwapniL -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Animation v2.0 || Swapnil's Lab</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: monospace;
+    }
+    body{
+      color: white;
+      background-color: black;
+    }
+    #base{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .initial{
+      font-size: 2em;
+      white-space: nowrap;
+      overflow-x: hidden;
+      border-right: 2px solid red;
+      animation: 
+      blink 0.8s linear infinite alternate;
+    }
+    .animate0{
+      width: 7ch;
+      animation:
+      blink 0.8s linear infinite alternate,
+      typing0 1.5s steps(7) alternate 2 forwards;
+    }
+    .animate1{
+      width: 5ch;
+      animation:
+      blink 0.8s linear infinite alternate,
+      typing1 1.2s steps(5) alternate 2 forwards;
+    }
+    .animate2{
+      width: 6ch;
+      animation:
+      blink 0.8s linear infinite alternate,
+      typing2 1.5s steps(6) alternate 2 forwards;
+    }
+    .animate3{
+      width: 5ch;
+      animation:
+      blink 0.8s linear infinite alternate,
+      typing3 1.2s steps(5) alternate 2 forwards;
+    }
+    @keyframes blink{
+      50%{
+        border-right-color: transparent;
+      }
+    }
+    @keyframes typing0 {
+      0%{
+        width: 0ch;
+      }
+      80%{
+          width: 7ch;
+      }
+    }
+    @keyframes typing1 {
+      0%{
+        width: 0ch;
+      }
+      80%{
+          width: 5ch;
+      }
+    }
+    @keyframes typing2 {
+      0%{
+        width: 0ch;
+      }
+      80%{
+          width: 6ch;
+      }
+    }
+    @keyframes typing3 {
+      0%{
+        width: 0ch;
+      }
+      80%{
+          width: 5ch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="base">
+    <div class="animate0 initial">Initial</div>
+  </div>
+
+<!-- script for changing text (starts)-->
+  <script>
+    var list = ['First', 'Second', 'Third', '👍🏻'];
+    const textbox = document.querySelector('.animate0');
+    var i = 0;
+    textbox.onanimationend = () => {
+      textbox.innerText = list[i];
+      if(i < list.length){
+       textbox.classList.remove('animate'+i);
+        textbox.classList.add('animate'+(i+1));
+        ++i;
+      }
+    }
+  </script>
+<!-- script for changing text (ends)-->
+
+</body>
+</html>
