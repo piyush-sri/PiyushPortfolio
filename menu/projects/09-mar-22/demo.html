@@ -1,0 +1,167 @@
+<!-- created by : SwapniL -->
+<!-- project : Skeleton Loading -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Loading Animation</title>
+
+<!-- import for 'Poppins' font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  </style>
+
+<!-- CSS rules (starts) -->
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+/* CSS rule for outer card */
+    #base{
+      position: relative;
+      top: 20vh;
+      height: 280px;
+      width: 250px;
+      background-color: rgba(128, 128, 128, 0.6);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+/* CSS rule for thumbnail */
+    .card{
+      height: 150px;
+      width: 200px;
+      background-color: gray;
+      overflow: hidden;
+      margin: 1.5em 0;
+    }
+
+/* CSS rule for logo */
+    .circle{
+      height: 50px;
+      width: 50px;
+      background-color: gray;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .group{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+    }
+
+/* CSS rule for title and description box (starts) */
+    .content{
+      height: 100%;
+      width: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      overflow: hidden;
+    }
+    .content div{
+      height: 15px;
+      width: 100%;
+      background-color: gray;
+      overflow: hidden;
+    }
+    .content div:nth-child(2){
+      width: 80% !important;
+    }
+/* CSS rule for title and description box (ends) */
+
+/* CSS rule for loading shadow */
+    .skeleton::before{
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0px;
+      background-color: gray;
+      box-shadow: 0 0 40px 10px #555;
+      animation: slide 1.2s linear forwards infinite;
+    }
+
+/* keyframes for loading shadow */
+    @keyframes slide {
+      to{
+        transform: translateX(300px);
+      }
+    }
+
+/* CSS rules for youtube link (starts) */
+    .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 80px);
+     }
+     .yt > a{
+        height : 40px;
+        width : 100px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color: white;
+        text-decoration : none;
+        color : black;
+        border-radius: 8px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 50px);
+        border:1px solid gray;
+      }
+/* CSS rules for youtube link (ends) */
+
+  </style>
+  
+<!-- CSS rules (ends) -->
+
+</head>
+<body>
+
+
+  <div id="base">
+    <div class="card skeleton"></div>
+    <div class="group">
+      <div class="circle skeleton"></div>
+      <div class="content">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+      <a href="https://youtu.be/bR_oupy3uaM"
+       target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project : Skeleton Loading -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
