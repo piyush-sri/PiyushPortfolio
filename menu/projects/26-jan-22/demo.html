@@ -1,0 +1,80 @@
+<!-- created by : SwapniL -->
+<!-- project name : Switch Button -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+      body{
+        background-color: aqua;
+      }
+      input{
+        visibility: hidden;
+      }
+      #bar{
+        position: relative;
+        top: 40vh;
+        height: 30px;
+        width: 80px;
+        background-color: teal;
+        position: relative;
+        border-radius: 30px;
+      }
+      label{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        background-color: rgb(241, 106, 106);
+        border-radius: 50%;
+        position: relative;
+        top: -11px;
+        left: -40px;
+        box-shadow: 3px 3px 3px teal;
+        transition: all 0.5s;
+      }
+      input:checked + label{
+        transform: translateX(50px);
+        background-color: rgb(0, 216, 0);
+      }
+
+/* CSS rule for youtube link */
+      a{
+        text-decoration: none;
+        position: relative;
+        top: 60vh;
+        background-color: rgb(8, 187, 187);
+        color: white;
+        padding: 12px;
+        box-shadow: 3px 3px 3px teal;
+        border-radius: 50px;
+      }
+  </style>
+</head>
+<body>
+    <center>
+      <div id="bar">
+        <input type="checkbox" id="toggle">
+        <label for="toggle"></label>
+      </div>
+
+<!-- markup for youtube link -->
+      <a href="https://youtu.be/q5T6Vr2Ptyk">view code</a>
+    </center>
+  </body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project name : Switch Button -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
