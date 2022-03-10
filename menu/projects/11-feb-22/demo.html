@@ -1,0 +1,104 @@
+<!-- created by : SwapniL -->
+<!-- project name : Glassmorphism UI -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism UI</title>
+  <style>
+      body{
+      background-color: black;
+    }
+
+/* CSS rule for circle A */
+    #a{
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-200px, -10px);
+      background: linear-gradient(0deg,red,blue);
+    }
+
+/* CSS rule for circle B */
+    #b{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(70px, -120px);
+      background: linear-gradient(90deg, red,orange);
+    }
+
+/* CSS rule for card */
+    #base{
+      height: 200px;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius : 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow:
+      1px 1px 1px rgba(255, 255, 255, 0.3),
+      -1px -1px 1px rgba(255, 255, 255, 0.3);
+    }
+
+/*  CSS rule for content */
+    #base::after{
+      content: "Created by - SwapniL";
+      text-align : center;
+      color: rgba(255, 255, 255, 0.8);
+      display: block;
+      height: 20px;
+      width: 200px;
+      position: relative;
+      top: calc(50% - 10px);
+      left: calc(50% - 100px);
+    }
+
+/* CSS rule for youtube link */
+    a{
+    text-decoration: none;
+    display:inline-block;
+    width : fit-content;
+    position: relative;
+    top: 80vh;
+    background: rgba(255, 255, 255, 0.15);
+    color: black;
+    padding: 12px;
+    border-radius: 20px;
+    color : white;
+    box-shadow:
+    1px 1px 1px rgba(255, 255, 255, 0.3),
+    -1px -1px 1px rgba(255, 255, 255, 0.3)
+    }
+  </style>
+</head>
+<body>
+  <div id="a"></div>
+  <div id="b"></div>
+  <div id="base"></div>
+  <center>
+<!-- markup for youtube link -->
+  <a href="https://youtu.be/Ip43iiTLoXU"
+ target="_blank">let's learn</a>
+ </center>
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project name : Glassmorphism UI -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->

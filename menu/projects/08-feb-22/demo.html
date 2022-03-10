@@ -1,0 +1,155 @@
+<!-- created by : SwapniL -->
+<!-- project name : Finger Tap Loading -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finger Tap Loading</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    #base{
+      background-color: blue;
+      height: fit-content;
+      width: fit-content;
+      padding: 20px;
+      position: relative;
+      top: 20vh;
+    }
+    #finger1{
+      background-color: pink;
+      display: inline-block;
+      height: 90px;
+      width: 40px;
+      border-radius: 15px;
+      animation-name: finger;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 0ms;
+    }
+    #finger2{
+      background-color: pink;
+      display: inline-block;
+      height: 120px;
+      width: 40px;
+      border-radius: 15px;
+      animation-name: finger;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 200ms;
+    }
+    #finger3{
+      background-color: pink;
+      display: inline-block;
+      height: 150px;
+      width: 40px;
+      border-radius: 15px;
+      animation-name: finger;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 400ms;
+    }
+    #finger4{
+      background-color: pink;
+      display: inline-block;
+      height: 120px;
+      width: 40px;
+      border-radius: 15px;
+      animation-name: finger;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-delay: 600ms;
+    }
+    #finger5{
+      background-color: pink;
+      display: inline-block;
+      height: 40px;
+      width: 50px;
+      border-radius: 15px;
+    }
+    #finger1::after, #finger2::after, #finger3::after, #finger4::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 20px;
+      background-color: gray;
+      position: relative;
+      top: 10%;
+    }
+    .nail{
+      height: 25px;
+      width: 30px;
+      background-color: orange;
+      position: relative;
+      top: calc(100% - 30px);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    @keyframes finger{
+      0%{
+        transform: translateY(0px);
+      }
+      30%{
+        transform: translateY(-20px);
+      }
+      70%{
+        transform: translateY(0px);
+      }
+    }
+
+/* CSS rule for youtube link */
+    a{
+        text-decoration: none;
+        display:inline-block;
+        width : fit-content;
+        position: relative;
+        top: 30vh;
+        background-color: rgb(20, 120, 220);
+        color: black;
+        padding: 12px;
+        border-radius: 50px;
+        color : white;
+        box-shadow: 
+        inset 3px 3px 5px rgb(89, 172, 255), 
+        inset -3px -3px 5px rgb(16, 82, 148), 
+        3px 3px 5px gray;
+      }
+  </style>
+</head>
+<body>
+  <center>
+    <div id="base">
+      <div id="finger1">
+        <div class="nail"></div>
+      </div>
+      <div id="finger2">
+        <div class="nail"></div>
+      </div>
+      <div id="finger3">
+        <div class="nail"></div>
+      </div>
+      <div id="finger4">
+        <div class="nail"></div>
+      </div>
+      <div id="finger5"></div>
+    </div>
+
+<!-- markup for youtube link -->
+    <a href="https://youtu.be/z2vBvuD-ViU"
+ target="_blank">let's learn</a>
+  </center>
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project name : Finger Tap Loading -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->

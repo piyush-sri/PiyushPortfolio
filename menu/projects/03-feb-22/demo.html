@@ -1,0 +1,148 @@
+<!-- created by : SwapniL -->
+<!-- project name : Toggle Day/Night -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toggle Day/Night</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      input{
+        visibility: hidden;
+      }
+      body{
+        background-color: rgb(123, 241, 250);
+      }
+      label{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: orange;
+        border: 2px solid yellow;
+        position: relative;
+        top: 10vh;
+        transition: all 0.5s;
+      }
+      label::before{
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 50px;
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        animation-name: cloud;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      label::after{
+        content: "";
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        top: -8px;
+        left: 15px;
+        box-shadow: 12px -2px 0 white;
+        animation-name: cloud;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      input:checked + label{
+        background-color: black;
+        box-shadow: inset 15px 0px 0 white;
+        border: none;
+      }
+      input:checked + label::before{
+        content: "*";
+        color: white;
+        height: 0px;
+        width: 0px;
+        animation-name: star;
+        animation-duration: 0.5s;
+        animation-direction: alternate;
+      }
+      input:checked + label::after{
+        content: "*";
+        color: white;
+        height: 0px;
+        width: 0px;
+        animation-name: star;
+        animation-duration: 0.5s;
+        animation-delay : 0.5s;
+        animation-direction: alternate;
+      }
+      @keyframes cloud {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(-10px);
+        }
+      }
+      @keyframes star {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+      .dark{
+        background-color: black;
+        color: white;
+      }
+
+/* CSS rule for youtube link */
+      a{
+        text-decoration: none;
+        position: relative;
+        top: 40vh;
+        background-color: rgb(255,167,167);
+        color: black;
+        padding: 12px;
+        box-shadow: 2px 2px 1px gray;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+
+      <p>click the sun/moon to toggle day/night</p>
+      <div id="box">
+        <input type="checkbox" id="toggle" onchange="changeMode()">
+        <label for="toggle"></label>
+      </div>
+
+<!-- markup for youtube link -->
+      <a href="https://youtu.be/EFGV9jlIja8" target="_blank">let's learn</a>
+    </center>
+
+<!-- Script for day/night toggle -->
+    <script>
+      function changeMode(){
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project name : Toggle Day/Night -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
