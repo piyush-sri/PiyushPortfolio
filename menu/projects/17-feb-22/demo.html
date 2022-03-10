@@ -1,0 +1,144 @@
+<!-- created by : SwapniL -->
+<!-- project name : Hamburger Icon -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Icon</title>
+  <style>
+
+/* import for 'ubuntu' font */
+   @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent ;
+    }
+    body{
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .base{
+      position: relative;
+      top: 15vh;
+      height: 100px;
+      width: 100px;
+      border-radius: 20px;
+      background-color: teal;
+      margin: 20px;
+    }
+
+/* CSS rule for checkbox */
+    input{
+      cursor: pointer;
+      display: block;
+      height: 100px;
+      width: 100px;
+      background-color: teal;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+    }
+
+/* CSS rule for bars */
+    .top, .center, .bottom{
+      display: block;
+      position: absolute;
+      left: calc(50% - 30px);
+      height: 4px;
+      width: 60px;
+      border-radius: 5px;
+      background-color: aqua;
+      transition: all 0.3s;
+      z-index: 1;
+      transform-origin: center center;
+    }
+    .top{
+      top: calc(50% - 20px);
+    }
+    .center{
+      top: calc(50% - 2px);
+    }
+    .bottom{
+      top: calc(50% + 16px);
+    }
+
+/* CSS rule for input logic */
+    input:checked ~ #top1{
+      transform: rotate(35deg) translateX(10px) translateY(15px);
+    }
+    input:checked ~ #center1{
+      opacity: 0;
+    }
+    input:checked ~ #bottom1{
+      transform: rotate(-35deg)  translateX(10px) translateY(-15px);
+    }
+    input:checked ~ #top2{
+      transform: rotateZ(25deg) translateX(30px);
+      width: 30px;
+    }
+    input:checked ~ #center2{
+      transform: translateX(10px);
+      width: 40px;
+    }
+    input:checked ~ #bottom2{
+      transform: rotateZ(-25deg) translateX(30px);
+      width: 30px;
+    }
+
+/* CSS rule for youtube link */
+    a{
+        text-decoration: none;
+        display:inline-block;
+        width : fit-content;
+        position: relative;
+        top: 20vh;
+        color: aqua;
+        padding: 12px;
+        border-radius: 20px;
+        background-color : teal;
+        box-shadow:
+        1px 1px 3px gray;
+    }
+    p{
+        position:relative;
+        top:10vh;
+    }
+  </style>
+</head>
+<body>
+  <center>
+  <p>click on the icons</p>
+
+<!-- markup for first design -->
+    <div class="base">
+      <input type="checkbox">
+      <span class="top" id="top1"></span>
+      <span class="center" id="center1"></span>
+      <span class="bottom" id="bottom1"></span>
+    </div>
+
+<!-- markup for second design -->
+    <div class="base">
+      <input type="checkbox">
+      <span class="top" id="top2"></span>
+      <span class="center" id="center2"></span>
+      <span class="bottom" id="bottom2"></span>
+    </div>
+
+<!-- markup for youtube link -->
+    <a href="https://youtu.be/IodJrRdsjPo"
+     target="_blank">lets learn</a>
+  </center>
+</body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project name : Hamburger Icon -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->

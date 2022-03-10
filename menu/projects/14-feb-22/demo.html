@@ -1,0 +1,140 @@
+<!-- created by : SwapniL -->
+<!-- project name : Neumorphism Buttons -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neumorphism Button Icons</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!-- import for material icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        background-color: rgb(80, 80, 80); 
+      }
+
+/* CSS rule for base */
+      #base{
+        position: relative;
+        top: 30vh;
+        height: 100px;
+        width : 80%;
+        max-width : 300px;
+        min-width : 210px;
+        border-radius: 50px;
+        background-color :rgb(80, 80, 80);
+        box-shadow: 
+    -3px -3px 10px rgba(255, 255, 255, 0.2),
+        3px 3px 10px rgba(0, 0, 0, 0.8);
+      }
+      input{
+        visibility: hidden;
+      }
+      label{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        top : calc(50% - 25px);
+        left: -10px;
+      }
+
+/* CSS rule for Material icons */
+      label::before{
+        font-family: "Material Icons";
+        color: white;
+        display: inline-block;
+        padding: 5px;
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        position: relative;
+        top : calc(50% - 25px);
+      }
+      [for=home]::before{
+        content: "home";
+      }
+      [for=person]::before{
+        content: "person";
+      }
+      [for=favorite]::before{
+        content: "favorite_border";
+      }
+
+/* CSS rule for input logic */
+    input:checked + label::before{
+      box-shadow:
+  inset -1px -1px 3px rgba(255, 255, 255, 0.2),
+  inset 1px 1px 3px rgba(0, 0, 0, 1);
+    }
+      input:checked + [for=favorite]::before{
+        color: red;
+      }
+      input:checked + [for=home]::before{
+        color: aqua;
+      }
+      input:checked + [for=person]::before{
+        color: lightgreen;
+      }
+
+/* CSS rule for youtube link */
+    a{
+      text-decoration: none;
+      font-family:arial;
+      display:inline-block;
+      width : fit-content;
+      position: relative;
+      top: 50vh;
+      color: black;
+      padding: 12px;
+      border-radius: 20px;
+      color : white;
+      box-shadow:
+      -3px -3px 10px rgba(255, 255, 255, 0.2),
+       3px 3px 10px rgba(0, 0, 0, 0.8);
+    }
+    p{
+        color:white;
+        position:relative;
+        top : 20vh;
+        font-family:arial;
+    }
+    </style>
+  </head>
+  <body>
+    <center>
+    <p>click on the icons</p>
+
+<!-- markup for icon --> 
+      <div id="base">
+        <input type="checkbox" id="home">
+        <label for="home"></label>
+        <input type="checkbox" id="person">
+        <label for="person"></label>
+        <input type="checkbox" id="favorite">
+        <label for="favorite"></label>
+      </div>
+
+<!-- markup for youtube link -->
+    <a href="https://youtu.be/65sBQV-4cVU"
+     target="_blank">lets learn</a>
+
+    </center>
+  </body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project name : Neumorphism Buttons -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
