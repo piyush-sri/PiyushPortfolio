@@ -1,0 +1,132 @@
+<!-- created by : SwapniL -->
+<!-- project : Newton's Cradle -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newton's Cradle</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .base{
+      height: 250px;
+      width: 350px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    .sphere{
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      position: relative;
+      top: 150px;
+      border-radius: 50%;
+      background: radial-gradient(white, black);
+    }
+    .sphere::before{
+      content: "";
+      display: block;
+      height: 100px;
+      width: 1px;
+      background-color: brown;
+      position: relative;
+      top: -100px;
+      left: 23px;
+    }
+    .bar{
+      height: 5px;
+      width: 220px;
+      background-color: brown;
+      position: absolute;
+      top: 45px;
+    }
+    .first{
+      animation: rotatePositive 1s  alternate infinite;
+      transform-origin: 23px -100px;
+    }
+    .last{
+      animation: rotateNegative 1s 1s alternate infinite;
+      transform-origin: 23px -100px;
+    }
+    @keyframes rotatePositive {
+      0%{
+        transform: rotate(0deg);
+      }
+      50%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(20deg);
+      }
+    }
+    @keyframes rotateNegative {
+      0%{
+        transform: rotate(0deg);
+      }
+      50%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(-20deg);
+      }
+    }
+    .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 80px);
+     }
+     .yt > a{
+        height : 40px;
+        width : 100px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color: rgba(128, 128, 128, 0.6);
+        text-decoration : none;
+        color : black;
+        border-radius: 8px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 50px);
+        border:1px solid gray;
+      }
+  </style>
+</head>
+<body>
+  <div class="base">
+    <div class="bar"></div>
+    <div class="sphere first"></div>
+    <div class="sphere"></div>
+    <div class="sphere"></div>
+    <div class="sphere"></div>
+    <div class="sphere last"></div>
+  </div>
+
+  <div class="yt">
+      <a href="https://youtu.be/qzGYDoohCec"
+       target="_blank">let's learn</a>
+  </div>
+
+</body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project : Newton's Cradle -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
