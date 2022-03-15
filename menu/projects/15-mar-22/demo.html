@@ -1,0 +1,124 @@
+<!-- created by : SwapniL -->
+<!-- project : Simple Loader -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loader</title>
+<!-- CSS rules (start) -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+/* CSS rule for base */
+        .base{
+            height: 300px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+/* CSS rule for circles */
+        .circle{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px solid teal;    
+            position: absolute;
+        }
+
+/* CSS rule specially for circle one */
+        .one{
+            animation: rotatePositive 3s linear infinite;
+        }
+
+/* CSS rule specially for circle two */
+        .two{
+            animation: rotateNegative 3s linear infinite;
+        }
+
+/* keyframes for circle one */
+        @keyframes rotatePositive {
+            0%{
+                transform: 
+               rotateX(45deg) rotateY(0deg);
+            }
+            100%{
+                transform: 
+              rotateX(45deg) rotateY(360deg);
+            }
+        }
+
+/* keyframes for circle two */
+        @keyframes rotateNegative {
+            0%{
+                transform: 
+               rotateX(-45deg) rotateY(0deg);
+            }
+            100%{
+                transform: 
+            rotateX(-45deg) rotateY(360deg) ;
+            }
+        }
+
+/* CSS rules for youtube link (start) */
+     .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 80px);
+     }
+     .yt > a{
+        height : 40px;
+        width : 100px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color:aqua;
+        text-decoration : none;
+        color : black;
+        border-radius: 8px;
+        position: relative;
+        top: calc(50% - 20px);
+        left: calc(50% - 50px);
+        border:1px solid teal;
+      }
+/* CSS rules for youtube link (end) */
+
+    </style>
+<!-- CSS rules (end) -->
+</head>
+<body>
+
+    <div class="base">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+    </div>
+
+<!-- markup for youtube link (starts) -->
+    <div class="yt">
+      <a href="https://youtu.be/FNeJyUjq694"
+       target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->    
+
+</body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project : Simple Loader -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
