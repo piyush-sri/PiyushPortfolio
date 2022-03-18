@@ -1,0 +1,140 @@
+<!-- created by : SwapniL -->
+<!-- project : Animated List -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated List || Swapnil's Lab</title>
+
+<!-- import for font 'Roboto Mono' -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+  </style>
+
+<!-- CSS rules (start) -->
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Roboto Mono';
+      color: white;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lightblue;
+    }
+    .lists{
+      height: 50px;
+      width: 250px;
+      background-color: rgb(255, 166, 0);
+      margin: 1em;
+      display: flex;
+      align-items: center;
+      box-shadow: 
+      0em 0.4em 0.5em rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    .lists::before{
+      content: "";
+      display: block;
+      height: 50px;
+      width: 30px;
+      background-color: brown ;
+      position: absolute;
+    }
+    .lists:nth-child(2n)::before{
+      right: 0px;
+    }
+    h3{
+      width: 100%;
+      text-align: center;
+      color: brown;
+    }
+    .lists::after{
+      content: attr(title);
+      position: absolute;
+      font-size: 1.2em;
+      padding: 0.5em;
+      font-weight: bold;
+    }
+    .lists:nth-child(2n)::after{
+      right: 0px;
+    }
+    .lists:nth-child(2n+1){
+      animation: slideright 1s linear;
+    }
+    @keyframes slideright {
+      from{
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+    }
+    .lists:nth-child(2n){
+      animation: slideleft 1s linear;
+    }
+    @keyframes slideleft {
+      from{
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+    .yt{
+        height : 60px;
+        width : 100%;
+        position: absolute;
+        top: calc(100% - 60px);
+     }
+     .yt > a{
+        height : 40px;
+        width : 150px;
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        text-decoration : none;
+        color : black !important;
+        font-weight: bold;
+        border-radius: 8px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 75px);
+        border:1px solid brown;
+        background-color: rgb(255, 166, 0);
+    }
+  </style>
+</head>
+<body>
+  <div class="base">
+    <div class="lists" title="1">
+      <h3>This is title</h3>
+    </div>
+    <div class="lists" title="2">
+      <h3>This is title</h3>
+    </div>
+    <div class="lists" title="3">
+      <h3>This is title</h3>
+    </div>
+    <div class="lists" title="4">
+      <h3>This is title</h3>
+    </div>
+    <div class="lists" title="5">
+      <h3>This is title</h3>
+    </div>
+  </div>
+  <div class="yt">
+    <a href="https://youtu.be/adOcPJsKEIg" target="_blank">let's learn</a>
+  </div>
+</body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project : Animated List -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
