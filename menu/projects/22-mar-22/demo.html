@@ -1,0 +1,146 @@
+<!-- created by : SwapniL -->
+<!-- project : Floating Action Button -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Action</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .base{
+      height: 60px;
+      width: 60px;
+      position: relative;
+      font-family: 'Material Icons';
+      color: white;
+    }
+    .base::after{
+      content: "menu";
+      display: block;
+      position: absolute;
+      top: 0;
+      font-size: 3em;
+      padding: 0.13em;
+      transition: all 0.5s 0.7s;
+    }
+    .block{
+      height: 30px;
+      width: 30px;
+      background-color: teal;
+      transition: all 1s;
+    }
+    .row{
+      display: flex;
+    }
+    .top-left{
+      --x : -20px;
+      --y : -20px;
+    }
+    .top-right{
+      --x : 20px;
+      --y : -20px;
+    }
+    .bottom-left{
+      --x : -20px;
+      --y : 20px;
+    }
+    .bottom-right{
+      --x : 20px;
+      --y : 20px;
+    }
+    .base:hover .block{
+      transform: 
+      translateX(var(--x))
+      translateY(var(--y))
+      scale(1.5);
+    }
+    .base:hover::after{
+      opacity: 0;
+    }
+    span{
+      display: block;
+      padding: 0.4em;
+      opacity: 0;
+      transition: all 1s;
+    }
+    .base:hover span{
+      opacity: 1;
+    }
+/* CSS rules for youtube link (start) */
+    .yt{
+      height : 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+     }
+    .yt > a{
+      display : flex;
+      align-items : center;
+      text-decoration : none;
+      color: white;
+      font-weight: bold;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      background-color: teal;
+    }
+/* CSS rules for youtube link (end) */
+  </style>
+</head>
+<body>
+  <div class="base">
+    <div class="row">
+      <div class="block top-left">
+        <span class="material-icons-outlined">
+          share
+        </span>
+      </div>
+      <div class="block top-right">
+        <span class="material-icons-outlined">
+          content_cut
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="block bottom-left">
+        <span class="material-icons-outlined">
+          content_paste
+        </span>
+      </div>
+      <div class="block bottom-right">
+        <span class="material-icons-outlined">
+          content_copy
+        </span>
+      </div>
+    </div>
+  </div>
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+    <a href="https://youtu.be/G0lzW9jTmoo" target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project : Floating Action Button -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
