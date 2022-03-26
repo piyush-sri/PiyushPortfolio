@@ -1,0 +1,160 @@
+<!-- created by : SwapniL -->
+<!-- project : Animated Profile Card -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnTitLed</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: burlywood;
+    }
+    .card{
+      height: 250px;
+      width: 220px;
+      display: flex;
+      justify-content: center;
+      background-color: yellowgreen;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+      0em 0.6em 1.2em rgba(0, 0, 0, 0.3);
+    }
+    .dp{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-image: url('https://blob.sololearn.com/avatars/28fccba9-d1e4-4e0c-b228-c9ecc7cce0ac.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transition: all 0.5s;
+    }
+    .card:hover .dp{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .card:hover span{
+      opacity: 1;
+      transform:  translateY(0px);
+    }
+    .card:hover .content {
+      opacity: 1;
+      transform:  translateY(20px);
+    }
+    .connections{
+      position: absolute;
+      bottom: 0px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .connections span{
+      display: block;
+      height: 50px;
+      width: 50px;
+      color: white;
+      margin: 0.3em;
+      padding: 0.27em;
+      font-size: 2em;
+      background-color: slateblue;
+      border-radius: 50%;
+      font-family: "Material Icons";
+      opacity: 0;
+      transition: all 1s var(--delay);
+      transform:  translateY(50px);
+    }
+    .content{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 1s 0.1s;
+      font-size: 1.5em;
+    }
+    .connections span:nth-child(1){
+      --delay : 0ms;
+    }
+    .connections span:nth-child(2){
+      --delay : 200ms;
+    }
+    .connections span:nth-child(3){
+      --delay : 400ms;
+    }
+
+/* CSS rules for youtube link (start) */
+    .yt{
+      height : 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+     }
+    .yt > a{
+      display : flex;
+      align-items : center;
+      text-decoration : none;
+      color : white;
+      font-size : 1.2em;
+      border-radius: 0.5em;
+      padding: 0.4em 1em;
+      background-color: slateblue;
+    }
+/* CSS rules for youtube link (end) */
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="dp"></div>
+    <div class="content">
+      <h2>SwapniL</h2>
+      <p>India</p>
+    </div>
+    <div class="connections">
+      <span class="material-icons-outlined">
+        person
+      </span>
+      <span class="material-icons-outlined">
+        email
+      </span>
+      <span class="material-icons-outlined">
+        whatsapp
+      </span>
+    </div>
+  </div>
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+    <a href="https://youtu.be/vjc2nwojR0E" target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project : Animated Profile Card -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
