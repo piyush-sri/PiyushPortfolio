@@ -1,0 +1,151 @@
+<!-- created by : SwapniL -->
+<!-- project : Reveal Animation -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!-- created by : SwapniL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reveal Animation</title>
+
+<!-- import for "Poppins" font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  </style>
+
+<!-- CSS rules (start) -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: cornflowerblue;
+    }
+
+/* CSS rule for card */
+    .base{
+      height: 320px;
+      width: 250px;
+      background-color: palevioletred;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      box-shadow : 
+      0em 0.6em 1.2em rgba(0,0,0,0.3);
+    }
+
+/* CSS rule for layers container */
+    .layers-container{
+      position: absolute;
+      overflow: hidden;
+    }
+
+/* CSS rule for layers */
+    .base span{
+      display: block;
+      height: 80px;
+      width: 250px;
+      background-color: aqua;
+      transition: all 1s var(--delay);
+    }
+
+/* CSS rule specially for first layer */
+    .base span:nth-child(1){
+      --delay : 0ms;
+    }
+
+/* CSS rule specially for second layer */
+    .base span:nth-child(2){
+      --delay : 100ms;
+    }
+
+/* CSS rule specially for third layer */
+    .base span:nth-child(3){
+      --delay : 200ms;
+    }
+
+/* CSS rule specially for fourth layer */
+    .base span:nth-child(4){
+      --delay : 300ms;
+    }
+
+/* CSS rule for hover logic */
+    .base:hover span{
+      transform: translateX(250px);
+    }
+
+/* CSS rules for content (start) */
+    h2{
+      color: white;
+      text-align: center;
+      margin: 1em;
+    }
+    p{
+      color: white;
+      text-align: justify;
+      margin: 1.5em;
+    }
+/* CSS rules for content (end) */
+
+
+/* CSS rules for youtube link (start) */
+    .yt{
+      height : 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+     }
+    .yt > a{
+      display : flex;
+      align-items : center;
+      text-decoration : none;
+      color : white;
+      font-size : 1.2em;
+      border-radius: 0.5em;
+      padding: 0.4em 1em;
+      background-color: palevioletred;
+    }
+/* CSS rules for youtube link (end) */
+
+  </style>
+<!-- CSS rules (end) -->
+
+</head>
+<body>
+  <div class="base">
+    <div class="layers-container">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h2>This is heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci distinctio tempore accusantium, numquam eveniet incidunt consequuntur cupiditate perferendis. </p>
+  </div>
+
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+    <a href="https://youtu.be/the4TWGNtXE" target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project : Reveal Animation -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!-- created by : SwapniL -->
