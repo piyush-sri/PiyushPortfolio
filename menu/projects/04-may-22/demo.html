@@ -1,0 +1,134 @@
+<!-- created by : SwapniL -->
+<!-- project : Animated Envelope -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!-- created by : SwapniL -->
+<!-- created by : SwapniL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Envelope</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .base{
+      height: 200px;
+      width: 300px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .letter{
+      height: 0px;
+      width: 0px;
+      border-top: 100px solid red;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      transition: all 1s;
+      transform-origin: 0px 0px;
+      position: absolute;
+      z-index: 6;
+    }
+    .letter:hover{
+      animation: open 1s linear forwards;
+      z-index: 1;
+    }
+    @keyframes open{
+      to{
+        transform: rotateX(180deg);
+      }
+    }
+    .letter:hover ~ .paper{
+      animation: show 1s 1s linear forwards;
+    }
+    @keyframes show{
+      to{
+        transform: translateY(-50px);
+      }
+    }
+    .cover{
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      height: 0px;
+      width: 0px;
+      border-top: 200px solid transparent;
+    }
+    .cover-left{
+      border-left: 300px solid rgb(200,0,0);
+    }
+    .cover-right{
+      border-right: 300px solid rgb(200,0,0);
+    }
+    .paper{
+      height: 200px;
+      width: 280px;
+      border-radius: 5px;
+      background-color: white;
+      position: relative;
+      z-index: 2;
+      transition: all 1s 1s;
+      box-shadow: 0px 0px 2px black;
+    }
+    h3{
+      text-align: center;
+      padding: 1em;
+    }
+/* CSS rules for youtube link (start) */
+    .yt{
+      height : 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+     }
+    .yt > a{
+      display : flex;
+      align-items : center;
+      text-decoration : none;
+      color : white;
+      font-size : 1.2em;
+      border-radius: 0.5em;
+      padding: 0.4em 1em;
+      background-color: red;
+    }
+/* CSS rules for youtube link (end) */
+  </style>
+</head>
+<body>
+  <div class="base">
+    <div class="letter"></div>
+    <div class="cover cover-left"></div>
+    <div class="cover cover-right"></div>
+    <div class="paper">
+      <h3>This is heading</h3>
+    </div>
+  </div>
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+    <a href="https://youtu.be/vRAz2QjRRTQ"
+     target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+</body>
+</html>
+<!-- created by : SwapniL -->
+<!-- project : Animated Envelope -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!-- created by : SwapniL -->
