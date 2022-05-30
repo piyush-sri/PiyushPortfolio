@@ -1,0 +1,340 @@
+<!-- created by : SwapniL -->
+<!-- project : Slot Machine Effect -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!-- created by : SwapniL -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Effect</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .base{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    .letter-one, .letter-two, .letter-three{
+        height: 100px;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 95px;
+        background-color: aqua;
+    }
+    .letter-one tr{
+      --ch:-5;
+      animation: scroll 1s 1s linear forwards;
+    }
+    .letter-two tr{
+      --ch:-20;
+      animation: scroll 3s 1s linear forwards;
+    }
+    .letter-three tr{
+      --ch:-13;
+      animation: scroll 2s 1s linear forwards;
+    }
+    @keyframes scroll {
+      to{
+        transform: translateY(calc(var(--ch) * 100%));
+      }
+    }
+/* CSS rules for youtube link (start) */
+    .yt{
+      height : 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+     }
+    .yt > a{
+      display : flex;
+      align-items : center;
+      text-decoration : none;
+      color : white;
+      font-size : 1.2em;
+      border-radius: 5px;
+      padding: 0.4em 1em;
+      background-color: red;
+    }
+/* CSS rules for youtube link (end) */
+  </style>
+</head>
+<body>
+  <div class="base">
+    <div class="letter-one">
+      <table>
+          <tr>
+              <td>A</td>
+          </tr>
+          <tr>
+              <td>B</td>
+          </tr>
+          <tr>
+              <td>C</td>
+          </tr>
+          <tr>
+              <td>D</td>
+          </tr>
+          <tr>
+              <td>E</td>
+          </tr>
+          <tr>
+              <td>F</td>
+          </tr>
+          <tr>
+              <td>G</td>
+          </tr>
+          <tr>
+              <td>H</td>
+          </tr>
+          <tr>
+              <td>I</td>
+          </tr>
+          <tr>
+              <td>J</td>
+          </tr>
+          <tr>
+              <td>K</td>
+          </tr>
+          <tr>
+              <td>L</td>
+          </tr>
+          <tr>
+              <td>M</td>
+          </tr>
+          <tr>
+              <td>N</td>
+          </tr>
+          <tr>
+              <td>O</td>
+          </tr>
+          <tr>
+              <td>P</td>
+          </tr>
+          <tr>
+              <td>Q</td>
+          </tr>
+          <tr>
+              <td>R</td>
+          </tr>
+          <tr>
+              <td>S</td>
+          </tr>
+          <tr>
+              <td>T</td>
+          </tr>
+          <tr>
+              <td>U</td>
+          </tr>
+          <tr>
+              <td>V</td>
+          </tr>
+          <tr>
+              <td>W</td>
+          </tr>
+          <tr>
+              <td>X</td>
+          </tr>
+          <tr>
+              <td>Y</td>
+          </tr>
+          <tr>
+              <td>Z</td>
+          </tr>
+      </table>
+    </div>
+    <div class="letter-two">
+        <table>
+            <tr>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>E</td>
+            </tr>
+            <tr>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+            </tr>
+            <tr>
+                <td>H</td>
+            </tr>
+            <tr>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>J</td>
+            </tr>
+            <tr>
+                <td>K</td>
+            </tr>
+            <tr>
+                <td>L</td>
+            </tr>
+            <tr>
+                <td>M</td>
+            </tr>
+            <tr>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>O</td>
+            </tr>
+            <tr>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>Q</td>
+            </tr>
+            <tr>
+                <td>R</td>
+            </tr>
+            <tr>
+                <td>S</td>
+            </tr>
+            <tr>
+                <td>T</td>
+            </tr>
+            <tr>
+                <td>U</td>
+            </tr>
+            <tr>
+                <td>V</td>
+            </tr>
+            <tr>
+                <td>W</td>
+            </tr>
+            <tr>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>Z</td>
+            </tr>
+        </table>
+    </div>
+    <div class="letter-three">
+        <table>
+            <tr>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>E</td>
+            </tr>
+            <tr>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+            </tr>
+            <tr>
+                <td>H</td>
+            </tr>
+            <tr>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>J</td>
+            </tr>
+            <tr>
+                <td>K</td>
+            </tr>
+            <tr>
+                <td>L</td>
+            </tr>
+            <tr>
+                <td>M</td>
+            </tr>
+            <tr>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>O</td>
+            </tr>
+            <tr>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>Q</td>
+            </tr>
+            <tr>
+                <td>R</td>
+            </tr>
+            <tr>
+                <td>S</td>
+            </tr>
+            <tr>
+                <td>T</td>
+            </tr>
+            <tr>
+                <td>U</td>
+            </tr>
+            <tr>
+                <td>V</td>
+            </tr>
+            <tr>
+                <td>W</td>
+            </tr>
+            <tr>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>Z</td>
+            </tr>
+        </table>
+    </div>
+  </div>
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+    <a href="https://youtu.be/LmjHp9AFCqU" target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project : Slot Machine Effect -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+<!-- created by : SwapniL -->
