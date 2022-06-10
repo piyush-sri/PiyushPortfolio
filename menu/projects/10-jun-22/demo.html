@@ -1,0 +1,136 @@
+<!-- created by : SwapniL -->
+<!-- project : Sold Animation -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
+
+<!-- created by : SwapniL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sold Animation</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card{
+      height: 300px;
+      width: 200px;
+      background-color: aqua;
+      position: relative;
+      border-radius: 10px;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .sold{
+      height: 50px;
+      width: 50px;
+      background-color: orangered;
+      color: white;
+      border-radius: 50%;
+      padding: 1em 0.5em;
+      position: absolute;
+      left: -1em;
+      top: -1em;
+      z-index: 2;
+      visibility: hidden;
+    }
+    .sold::after, .sold::before{
+      content: "";
+      display: block;
+      height: 30px;
+      width: 15px;
+      background-color: orangered;
+      transform: rotate(20deg);
+    }
+    .sold::before{
+      transform: rotate(-20deg);
+      position: absolute;
+      top: 34px;
+      left: 25px;
+    }
+    label{
+      width: 100px;
+      background-color: teal;
+      color: white;
+      position: absolute;
+      top: 101%;
+      left: calc(50% - 50px);
+      border-radius: 5px;
+      text-align: center;
+      padding : 0.5em;
+    }
+    input{
+      display: none;
+    }
+    @keyframes splash {
+      from{
+        opacity: 0;
+        transform: scale(10);
+      }
+    }
+    [type=checkbox]:checked ~ .sold{
+      visibility: visible;
+      animation: splash 200ms linear;
+    }
+
+/* CSS rules for youtube link (start) */
+    .yt{
+      height : 15px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+     }
+    .yt > a{
+      width: 80%;
+      display : flex;
+      align-items : center;
+      justify-content: center;
+      text-decoration : none;
+      color : white;
+      font-size : 1.2em;
+      border-radius: 5px;
+      padding: 0.4em 1em;
+      background-color: red;
+    }
+/* CSS rules for youtube link (end) */
+  </style>
+</head>
+<body>
+  <div class="base">
+    <div class="card">
+      <label for="buy">BUY</label>
+      <input id="buy" type="checkbox">
+      <div class="sold">Sold</div>
+      <img src="https://p.turbosquid.com/ts-thumb/A1/FyzrE8/KO/15/png/1634317571/600x600/fit_q87/79fba1c555df88a32e0af51b71744d61e27160b5/15.jpg" alt="phone-image">
+    </div>
+  </div>
+<!-- markup for youtube link (starts) -->
+  <div class="yt">
+    <a href="https://youtu.be/krBulYaynDA" target="_blank">let's learn</a>
+  </div>
+<!-- markup for youtube link (ends) -->
+</body>
+</html>
+
+<!-- created by : SwapniL -->
+<!-- project : Sold Animation -->
+<!-- website : lab-swapnil.github.io -->
+<!-- youtube : Swapnil's Lab -->
