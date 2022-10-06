@@ -26,6 +26,14 @@
   background-color: rgb(93, 185, 255);
   padding: 2em;
 }
+.wrapper-five{
+  background-color: rgb(186, 137, 255);
+  padding: 2em;
+}
+.wrapper-six{
+  background-color: rgb(181, 255, 121);
+  padding: 2em;
+}
 @media screen and (min-width:850px){
   .container{
     display: flex;
